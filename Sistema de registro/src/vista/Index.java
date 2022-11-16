@@ -5,6 +5,10 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author danie
@@ -26,7 +30,6 @@ public class Index extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -40,13 +43,14 @@ public class Index extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         entradaContrasena = new javax.swing.JPasswordField();
         botonLogin = new javax.swing.JButton();
+        botonRegistro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(205, 205, 205));
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -67,11 +71,11 @@ public class Index extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 420, -1));
@@ -121,7 +125,7 @@ public class Index extends javax.swing.JFrame {
         botonLogin.setForeground(new java.awt.Color(255, 255, 255));
         botonLogin.setText("Login");
         botonLogin.setBorder(null);
-        botonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        botonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonLogin.setFocusPainted(false);
         botonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,12 +134,24 @@ public class Index extends javax.swing.JFrame {
         });
         jPanel2.add(botonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 200, 40));
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipady = 50;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        jPanel1.add(jPanel2, gridBagConstraints);
+        botonRegistro.setBackground(new java.awt.Color(255, 255, 255));
+        botonRegistro.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        botonRegistro.setForeground(new java.awt.Color(0, 124, 186));
+        botonRegistro.setText("Registrarse");
+        botonRegistro.setBorder(null);
+        botonRegistro.setBorderPainted(false);
+        botonRegistro.setContentAreaFilled(false);
+        botonRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonRegistro.setDefaultCapable(false);
+        botonRegistro.setFocusPainted(false);
+        botonRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRegistroActionPerformed(evt);
+            }
+        });
+        jPanel2.add(botonRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 380));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,6 +171,10 @@ public class Index extends javax.swing.JFrame {
     private void botonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonLoginActionPerformed
+
+    private void botonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonRegistroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,8 +211,25 @@ public class Index extends javax.swing.JFrame {
         });
     }
 
+    public JButton getBotonLogin() {
+        return botonLogin;
+    }
+
+    public JButton getBotonRegistro() {
+        return botonRegistro;
+    }
+
+    public JPasswordField getEntradaContrasena() {
+        return entradaContrasena;
+    }
+
+    public JTextField getEntradaUsuario() {
+        return entradaUsuario;
+    }
+        
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonLogin;
+    private javax.swing.JButton botonRegistro;
     private javax.swing.JPasswordField entradaContrasena;
     private javax.swing.JTextField entradaUsuario;
     private javax.swing.JLabel jLabel1;

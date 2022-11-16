@@ -3,7 +3,7 @@ import vista.*;
 
 public class Main {
     public static void main(String[] args) {
-        EliminarFuncion login = new EliminarFuncion();
+        Index login = new Index();
         login.setVisible(true);
     }  
 }
