@@ -5,6 +5,8 @@
  */
 package vista;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author danie
@@ -29,9 +31,9 @@ public class Reservar extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnPerfil = new javax.swing.JButton();
+        btnInicio = new javax.swing.JButton();
+        btnReservar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -51,6 +53,7 @@ public class Reservar extends javax.swing.JFrame {
         jComboBox6 = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        btnCerrarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reservar Obra");
@@ -61,37 +64,37 @@ public class Reservar extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(28, 12, 91));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(28, 12, 91));
-        jButton1.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Perfil");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setFocusPainted(false);
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 110, 60));
+        btnPerfil.setBackground(new java.awt.Color(28, 12, 91));
+        btnPerfil.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
+        btnPerfil.setForeground(new java.awt.Color(255, 255, 255));
+        btnPerfil.setText("Perfil");
+        btnPerfil.setBorder(null);
+        btnPerfil.setBorderPainted(false);
+        btnPerfil.setFocusPainted(false);
+        jPanel2.add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 110, 60));
 
-        jButton3.setBackground(new java.awt.Color(28, 12, 91));
-        jButton3.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Inicio");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setFocusPainted(false);
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 110, 60));
+        btnInicio.setBackground(new java.awt.Color(28, 12, 91));
+        btnInicio.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
+        btnInicio.setForeground(new java.awt.Color(255, 255, 255));
+        btnInicio.setText("Inicio");
+        btnInicio.setBorder(null);
+        btnInicio.setBorderPainted(false);
+        btnInicio.setFocusPainted(false);
+        jPanel2.add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 110, 60));
 
-        jButton4.setBackground(new java.awt.Color(28, 12, 91));
-        jButton4.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Reservar");
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.setFocusPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnReservar.setBackground(new java.awt.Color(28, 12, 91));
+        btnReservar.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
+        btnReservar.setForeground(new java.awt.Color(255, 255, 255));
+        btnReservar.setText("Reservar");
+        btnReservar.setBorder(null);
+        btnReservar.setBorderPainted(false);
+        btnReservar.setFocusPainted(false);
+        btnReservar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnReservarActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 120, 60));
+        jPanel2.add(btnReservar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 120, 60));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 80));
 
@@ -184,7 +187,7 @@ public class Reservar extends javax.swing.JFrame {
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Obra de Teatro #1", "Obra de Teatro #2" }));
         jPanel3.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 140, -1));
 
-        jButton2.setBackground(new java.awt.Color(28, 12, 91));
+        jButton2.setBackground(new java.awt.Color(0, 124, 186));
         jButton2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Reservar Boletos");
@@ -198,7 +201,16 @@ public class Reservar extends javax.swing.JFrame {
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 210, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/escenario.jpeg"))); // NOI18N
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 460, 420));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 450, 370));
+
+        btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        btnCerrarSesion.setForeground(new java.awt.Color(0, 124, 186));
+        btnCerrarSesion.setText("Cerrar sesión ");
+        btnCerrarSesion.setBorderPainted(false);
+        btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrarSesion.setFocusPainted(false);
+        jPanel3.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 150, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 700, 420));
 
@@ -217,9 +229,9 @@ public class Reservar extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnReservarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -261,11 +273,30 @@ public class Reservar extends javax.swing.JFrame {
         });
     }
 
+    public JButton getBtnCerrarSesion() {
+        return btnCerrarSesion;
+    }
+
+    public JButton getBtnInicio() {
+        return btnInicio;
+    }
+
+    public JButton getBtnPerfil() {
+        return btnPerfil;
+    }
+
+    public JButton getBtnReservar() {
+        return btnReservar;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnInicio;
+    private javax.swing.JButton btnPerfil;
+    private javax.swing.JButton btnReservar;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;

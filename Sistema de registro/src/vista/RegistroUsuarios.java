@@ -5,6 +5,11 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author danie
@@ -37,23 +42,24 @@ public class RegistroUsuarios extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        contrasena = new javax.swing.JPasswordField();
+        entradaContrasena = new javax.swing.JPasswordField();
         jPanel4 = new javax.swing.JPanel();
-        nombre = new javax.swing.JTextField();
+        entradaNombre = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
-        apellido = new javax.swing.JTextField();
+        entradaApellido = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
-        curp = new javax.swing.JTextField();
+        entradaCurp = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
-        usuario = new javax.swing.JTextField();
+        entradaUsuario = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
-        confirmacionContrasena = new javax.swing.JPasswordField();
-        botonRegistrar = new javax.swing.JButton();
+        entradaConfirmacionContrasena = new javax.swing.JPasswordField();
+        btnRegistro = new javax.swing.JButton();
+        btnAtras = new javax.swing.JButton();
+        textError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro");
         setMinimumSize(new java.awt.Dimension(400, 500));
-        setPreferredSize(new java.awt.Dimension(400, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(400, 500));
 
@@ -66,113 +72,133 @@ public class RegistroUsuarios extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 80));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Registro de Usuarios");
         jLabel1.setToolTipText("");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 180, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 250, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 80));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(6, 71, 137));
+        jLabel2.setForeground(new java.awt.Color(0, 124, 186));
         jLabel2.setText("<html> Confirmar contraseña: </html>");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 140, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(6, 71, 137));
+        jLabel3.setForeground(new java.awt.Color(0, 124, 186));
         jLabel3.setText("Usuario:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
         jLabel3.getAccessibleContext().setAccessibleDescription("Nombre de Usuario");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(6, 71, 137));
+        jLabel4.setForeground(new java.awt.Color(0, 124, 186));
         jLabel4.setText("Nombre:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(6, 71, 137));
+        jLabel5.setForeground(new java.awt.Color(0, 124, 186));
         jLabel5.setText("Apellido:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(6, 71, 137));
+        jLabel6.setForeground(new java.awt.Color(0, 124, 186));
         jLabel6.setText("CURP:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(6, 71, 137));
+        jLabel7.setForeground(new java.awt.Color(0, 124, 186));
         jLabel7.setText("Contraseña:");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(187, 187, 187));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        contrasena.setBackground(new java.awt.Color(187, 187, 187));
-        contrasena.setBorder(null);
-        jPanel3.add(contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 240, 20));
+        entradaContrasena.setBackground(new java.awt.Color(187, 187, 187));
+        entradaContrasena.setBorder(null);
+        jPanel3.add(entradaContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 240, 20));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 260, 20));
 
         jPanel4.setBackground(new java.awt.Color(187, 187, 187));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        nombre.setBackground(new java.awt.Color(187, 187, 187));
-        nombre.setToolTipText("Nombre de pila");
-        nombre.setBorder(null);
-        jPanel4.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 20));
+        entradaNombre.setBackground(new java.awt.Color(187, 187, 187));
+        entradaNombre.setToolTipText("Nombre de pila");
+        entradaNombre.setBorder(null);
+        jPanel4.add(entradaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 20));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 280, -1));
 
         jPanel5.setBackground(new java.awt.Color(187, 187, 187));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        apellido.setBackground(new java.awt.Color(187, 187, 187));
-        apellido.setToolTipText("Apellido");
-        apellido.setBorder(null);
-        jPanel5.add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 20));
+        entradaApellido.setBackground(new java.awt.Color(187, 187, 187));
+        entradaApellido.setToolTipText("Apellido");
+        entradaApellido.setBorder(null);
+        jPanel5.add(entradaApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 20));
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 280, -1));
 
         jPanel6.setBackground(new java.awt.Color(187, 187, 187));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        curp.setBackground(new java.awt.Color(187, 187, 187));
-        curp.setToolTipText("CURP");
-        curp.setBorder(null);
-        jPanel6.add(curp, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 20));
+        entradaCurp.setBackground(new java.awt.Color(187, 187, 187));
+        entradaCurp.setToolTipText("CURP");
+        entradaCurp.setBorder(null);
+        jPanel6.add(entradaCurp, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 20));
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 280, -1));
 
         jPanel7.setBackground(new java.awt.Color(187, 187, 187));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        usuario.setBackground(new java.awt.Color(187, 187, 187));
-        usuario.setToolTipText("Nombre de Usuario");
-        usuario.setBorder(null);
-        jPanel7.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 20));
+        entradaUsuario.setBackground(new java.awt.Color(187, 187, 187));
+        entradaUsuario.setToolTipText("Nombre de Usuario");
+        entradaUsuario.setBorder(null);
+        jPanel7.add(entradaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 260, 20));
 
         jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 280, 20));
 
         jPanel8.setBackground(new java.awt.Color(187, 187, 187));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        confirmacionContrasena.setBackground(new java.awt.Color(187, 187, 187));
-        confirmacionContrasena.setBorder(null);
-        jPanel8.add(confirmacionContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 170, 20));
+        entradaConfirmacionContrasena.setBackground(new java.awt.Color(187, 187, 187));
+        entradaConfirmacionContrasena.setBorder(null);
+        jPanel8.add(entradaConfirmacionContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 170, 20));
 
         jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 190, -1));
 
-        botonRegistrar.setBackground(new java.awt.Color(28, 12, 91));
-        botonRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        botonRegistrar.setForeground(new java.awt.Color(255, 255, 255));
-        botonRegistrar.setText("Registrarse");
-        botonRegistrar.setBorderPainted(false);
-        botonRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botonRegistrar.setDefaultCapable(false);
-        botonRegistrar.setFocusPainted(false);
-        jPanel1.add(botonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, -1, 30));
+        btnRegistro.setBackground(new java.awt.Color(0, 124, 186));
+        btnRegistro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistro.setText("Registrarse");
+        btnRegistro.setBorderPainted(false);
+        btnRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegistro.setDefaultCapable(false);
+        btnRegistro.setFocusPainted(false);
+        jPanel1.add(btnRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, -1, 30));
+
+        btnAtras.setBackground(new java.awt.Color(255, 255, 255));
+        btnAtras.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnAtras.setForeground(new java.awt.Color(0, 124, 186));
+        btnAtras.setText("Atrás");
+        btnAtras.setBorderPainted(false);
+        btnAtras.setContentAreaFilled(false);
+        btnAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAtras.setFocusPainted(false);
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 80, 30));
+
+        textError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textError.setForeground(new java.awt.Color(255, 0, 0));
+        textError.setText("Error");
+        jPanel1.add(textError, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,6 +214,10 @@ public class RegistroUsuarios extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,12 +254,57 @@ public class RegistroUsuarios extends javax.swing.JFrame {
         });
     }
 
+    public JButton getBtnAtras() {
+        return btnAtras;
+    }
+
+    public JButton getBtnRegistro() {
+        return btnRegistro;
+    }
+
+    public JTextField getEntradaApellido() {
+        return entradaApellido;
+    }
+
+    public JPasswordField getEntradaConfirmacionContrasena() {
+        return entradaConfirmacionContrasena;
+    }
+
+    public JPasswordField getEntradaContrasena() {
+        return entradaContrasena;
+    }
+
+    public JTextField getEntradaCurp() {
+        return entradaCurp;
+    }
+
+    public JTextField getEntradaNombre() {
+        return entradaNombre;
+    }
+
+    public JTextField getEntradaUsuario() {
+        return entradaUsuario;
+    }
+
+    public JLabel getTextError() {
+        return textError;
+    }
+
+    public void setTextError(JLabel textError) {
+        this.textError = textError;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField apellido;
-    private javax.swing.JButton botonRegistrar;
-    private javax.swing.JPasswordField confirmacionContrasena;
-    private javax.swing.JPasswordField contrasena;
-    private javax.swing.JTextField curp;
+    private javax.swing.JButton btnAtras;
+    private javax.swing.JButton btnRegistro;
+    private javax.swing.JTextField entradaApellido;
+    private javax.swing.JPasswordField entradaConfirmacionContrasena;
+    private javax.swing.JPasswordField entradaContrasena;
+    private javax.swing.JTextField entradaCurp;
+    private javax.swing.JTextField entradaNombre;
+    private javax.swing.JTextField entradaUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -245,7 +320,6 @@ public class RegistroUsuarios extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JTextField nombre;
-    private javax.swing.JTextField usuario;
+    private javax.swing.JLabel textError;
     // End of variables declaration//GEN-END:variables
 }

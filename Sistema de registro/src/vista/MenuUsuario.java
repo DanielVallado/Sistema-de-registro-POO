@@ -5,6 +5,9 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author danie
@@ -29,20 +32,21 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnPerfil = new javax.swing.JButton();
+        btnInicio = new javax.swing.JButton();
+        btnReservar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        txtBienvenida = new javax.swing.JLabel();
+        imagen3 = new javax.swing.JLabel();
+        imagen1 = new javax.swing.JLabel();
+        imagen2 = new javax.swing.JLabel();
+        nombreObra3 = new javax.swing.JLabel();
+        nombreObra1 = new javax.swing.JLabel();
+        nombreObra2 = new javax.swing.JLabel();
+        descripcion3 = new javax.swing.JLabel();
+        descripcion1 = new javax.swing.JLabel();
+        descripcion2 = new javax.swing.JLabel();
+        btnCerrarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio");
@@ -53,88 +57,100 @@ public class MenuUsuario extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(28, 12, 91));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(28, 12, 91));
-        jButton1.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Perfil");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setFocusPainted(false);
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 110, 60));
+        btnPerfil.setBackground(new java.awt.Color(28, 12, 91));
+        btnPerfil.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        btnPerfil.setForeground(new java.awt.Color(255, 255, 255));
+        btnPerfil.setText("Perfil");
+        btnPerfil.setBorder(null);
+        btnPerfil.setBorderPainted(false);
+        btnPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnPerfil.setFocusPainted(false);
+        jPanel2.add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 110, 60));
 
-        jButton3.setBackground(new java.awt.Color(28, 12, 91));
-        jButton3.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Inicio");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setFocusPainted(false);
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 110, 60));
+        btnInicio.setBackground(new java.awt.Color(28, 12, 91));
+        btnInicio.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        btnInicio.setForeground(new java.awt.Color(255, 255, 255));
+        btnInicio.setText("Inicio");
+        btnInicio.setBorder(null);
+        btnInicio.setBorderPainted(false);
+        btnInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInicio.setFocusPainted(false);
+        jPanel2.add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 110, 60));
 
-        jButton4.setBackground(new java.awt.Color(28, 12, 91));
-        jButton4.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Reservar");
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.setFocusPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnReservar.setBackground(new java.awt.Color(28, 12, 91));
+        btnReservar.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        btnReservar.setForeground(new java.awt.Color(255, 255, 255));
+        btnReservar.setText("Reservar");
+        btnReservar.setBorder(null);
+        btnReservar.setBorderPainted(false);
+        btnReservar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReservar.setFocusPainted(false);
+        btnReservar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnReservarActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 120, 60));
+        jPanel2.add(btnReservar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 120, 60));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 80));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel1.setText("Bienvenido @NombreUsuario");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        txtBienvenida.setBackground(new java.awt.Color(255, 255, 255));
+        txtBienvenida.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        txtBienvenida.setForeground(new java.awt.Color(0, 124, 186));
+        txtBienvenida.setText("Bienvenido @NombreUsuario");
+        jPanel3.add(txtBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portada.jpg"))); // NOI18N
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 150, 150));
+        imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portada.jpg"))); // NOI18N
+        jPanel3.add(imagen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 150, 150));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portada.jpg"))); // NOI18N
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 150, 150));
+        imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portada.jpg"))); // NOI18N
+        jPanel3.add(imagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 150, 150));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portada.jpg"))); // NOI18N
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 150, 150));
+        imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portada.jpg"))); // NOI18N
+        jPanel3.add(imagen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 150, 150));
 
-        jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel5.setText("Nombre Obra 3");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 120, -1));
+        nombreObra3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        nombreObra3.setForeground(new java.awt.Color(0, 124, 186));
+        nombreObra3.setText("Nombre Obra 3");
+        nombreObra3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel3.add(nombreObra3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 120, -1));
 
-        jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel6.setText("Nombre Obra 1");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+        nombreObra1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        nombreObra1.setForeground(new java.awt.Color(0, 124, 186));
+        nombreObra1.setText("Nombre Obra 1");
+        jPanel3.add(nombreObra1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel7.setText("Nombre Obra 2");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+        nombreObra2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        nombreObra2.setForeground(new java.awt.Color(0, 124, 186));
+        nombreObra2.setText("Nombre Obra 2");
+        jPanel3.add(nombreObra2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("Descripción");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, -1, -1));
+        descripcion3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        descripcion3.setForeground(new java.awt.Color(102, 102, 102));
+        descripcion3.setText("Descripción");
+        jPanel3.add(descripcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel9.setText("Descripción");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, -1));
+        descripcion1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        descripcion1.setForeground(new java.awt.Color(102, 102, 102));
+        descripcion1.setText("Descripción");
+        jPanel3.add(descripcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("Descripción");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, -1, -1));
+        descripcion2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        descripcion2.setForeground(new java.awt.Color(102, 102, 102));
+        descripcion2.setText("Descripción");
+        jPanel3.add(descripcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, -1, -1));
+
+        btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        btnCerrarSesion.setForeground(new java.awt.Color(0, 124, 186));
+        btnCerrarSesion.setText("Cerrar sesión ");
+        btnCerrarSesion.setBorderPainted(false);
+        btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrarSesion.setFocusPainted(false);
+        jPanel3.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 150, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 700, 420));
 
@@ -153,9 +169,9 @@ public class MenuUsuario extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnReservarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,22 +208,123 @@ public class MenuUsuario extends javax.swing.JFrame {
         });
     }
 
+    public JButton getBtnCerrarSesion() {
+        return btnCerrarSesion;
+    }
+
+    public JButton getBtnInicio() {
+        return btnInicio;
+    }
+
+    public JButton getBtnPerfil() {
+        return btnPerfil;
+    }
+
+    public JButton getBtnReservar() {
+        return btnReservar;
+    }
+    
+    
+
+    public JLabel getDescripcion1() {
+        return descripcion1;
+    }
+
+    public void setDescripcion1(JLabel descripcion1) {
+        this.descripcion1 = descripcion1;
+    }
+
+    public JLabel getDescripcion2() {
+        return descripcion2;
+    }
+
+    public void setDescripcion2(JLabel descripcion2) {
+        this.descripcion2 = descripcion2;
+    }
+
+    public JLabel getDescripcion3() {
+        return descripcion3;
+    }
+
+    public void setDescripcion3(JLabel descripcion3) {
+        this.descripcion3 = descripcion3;
+    }
+
+    public JLabel getImagen1() {
+        return imagen1;
+    }
+
+    public void setImagen1(JLabel imagen1) {
+        this.imagen1 = imagen1;
+    }
+
+    public JLabel getImagen2() {
+        return imagen2;
+    }
+
+    public void setImagen2(JLabel imagen2) {
+        this.imagen2 = imagen2;
+    }
+
+    public JLabel getImagen3() {
+        return imagen3;
+    }
+
+    public void setImagen3(JLabel imagen3) {
+        this.imagen3 = imagen3;
+    }
+
+    public JLabel getNombreObra1() {
+        return nombreObra1;
+    }
+
+    public void setNombreObra1(JLabel nombreObra1) {
+        this.nombreObra1 = nombreObra1;
+    }
+
+    public JLabel getNombreObra2() {
+        return nombreObra2;
+    }
+
+    public void setNombreObra2(JLabel nombreObra2) {
+        this.nombreObra2 = nombreObra2;
+    }
+
+    public JLabel getNombreObra3() {
+        return nombreObra3;
+    }
+
+    public void setNombreObra3(JLabel nombreObra3) {
+        this.nombreObra3 = nombreObra3;
+    }
+
+    public JLabel getTxtBienvenida() {
+        return txtBienvenida;
+    }
+
+    public void setTxtBienvenida(JLabel txtBienvenida) {
+        this.txtBienvenida = txtBienvenida;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnInicio;
+    private javax.swing.JButton btnPerfil;
+    private javax.swing.JButton btnReservar;
+    private javax.swing.JLabel descripcion1;
+    private javax.swing.JLabel descripcion2;
+    private javax.swing.JLabel descripcion3;
+    private javax.swing.JLabel imagen1;
+    private javax.swing.JLabel imagen2;
+    private javax.swing.JLabel imagen3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel nombreObra1;
+    private javax.swing.JLabel nombreObra2;
+    private javax.swing.JLabel nombreObra3;
+    private javax.swing.JLabel txtBienvenida;
     // End of variables declaration//GEN-END:variables
 }

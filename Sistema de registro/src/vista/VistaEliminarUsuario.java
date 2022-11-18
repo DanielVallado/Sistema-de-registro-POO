@@ -1,20 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
-/**
- *
- * @author esaup
- */
-public class EliminarUsuario extends javax.swing.JFrame {
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class VistaEliminarUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form usuario
      */
-    public EliminarUsuario() {
+    public VistaEliminarUsuario() {
         initComponents();
     }
 
@@ -26,141 +21,60 @@ public class EliminarUsuario extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        label2 = new java.awt.Label();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jFrame1 = new javax.swing.JFrame();
-        jFrame2 = new javax.swing.JFrame();
-        jFrame3 = new javax.swing.JFrame();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnVolverAtras = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
-        jPanel5 = new javax.swing.JPanel();
-        jTextField4 = new javax.swing.JTextField();
-
-        label2.setText("label2");
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel1.setText("TEATRO");
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel2.setText("\"Chachita\"");
-
-        jLabel4.setText("jLabel4");
-
-        jLabel5.setText("jLabel5");
-
-        jToggleButton1.setText("jToggleButton1");
-
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
-        jFrame2.getContentPane().setLayout(jFrame2Layout);
-        jFrame2Layout.setHorizontalGroup(
-            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jFrame2Layout.setVerticalGroup(
-            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jFrame3Layout = new javax.swing.GroupLayout(jFrame3.getContentPane());
-        jFrame3.getContentPane().setLayout(jFrame3Layout);
-        jFrame3Layout.setHorizontalGroup(
-            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jFrame3Layout.setVerticalGroup(
-            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 88, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 72, Short.MAX_VALUE)
-        );
+        entradaUsuario = new javax.swing.JTextField();
+        txtError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Eliminar Usuarios");
         setResizable(false);
 
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(28, 12, 91));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Eliminar Usuario");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, -1, -1));
+        jLabel10.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Eliminar Usuarios");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, 60));
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 207;
-        gridBagConstraints.ipady = 22;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        jPanel1.add(jPanel2, gridBagConstraints);
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 700, 110));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBackground(new java.awt.Color(28, 12, 91));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Eliminar");
-        jButton2.setBorderPainted(false);
-        jButton2.setFocusPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminar.setBackground(new java.awt.Color(0, 124, 186));
+        btnEliminar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setText("Eliminar usuario");
+        btnEliminar.setBorderPainted(false);
+        btnEliminar.setFocusPainted(false);
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnEliminarActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 160, 40));
+        jPanel3.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 170, 50));
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 124, 186));
-        jButton3.setText("Volver atrás");
-        jButton3.setBorderPainted(false);
-        jButton3.setFocusPainted(false);
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 120, 30));
+        btnVolverAtras.setBackground(new java.awt.Color(255, 255, 255));
+        btnVolverAtras.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnVolverAtras.setForeground(new java.awt.Color(0, 124, 186));
+        btnVolverAtras.setText("Volver atrás");
+        btnVolverAtras.setBorderPainted(false);
+        btnVolverAtras.setFocusPainted(false);
+        jPanel3.add(btnVolverAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 120, 30));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 124, 186));
@@ -180,43 +94,26 @@ public class EliminarUsuario extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel11.setText("Nombre:");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel12.setText("Apellido:");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
+        jLabel11.setText("Nombre de usuario:");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(205, 205, 205));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField3.setBackground(new java.awt.Color(205, 205, 205));
-        jTextField3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(0, 124, 186));
-        jTextField3.setBorder(null);
-        jPanel4.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 350, 30));
+        entradaUsuario.setBackground(new java.awt.Color(205, 205, 205));
+        entradaUsuario.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaUsuario.setForeground(new java.awt.Color(0, 124, 186));
+        entradaUsuario.setBorder(null);
+        jPanel4.add(entradaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 350, 30));
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 370, 30));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 370, 30));
 
-        jPanel5.setBackground(new java.awt.Color(205, 205, 205));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        txtError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtError.setForeground(new java.awt.Color(255, 0, 51));
+        txtError.setText("Nombre de usuario inexistente");
+        jPanel3.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
 
-        jTextField4.setBackground(new java.awt.Color(205, 205, 205));
-        jTextField4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(0, 124, 186));
-        jTextField4.setBorder(null);
-        jPanel5.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 350, 30));
-
-        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 370, 30));
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 10;
-        gridBagConstraints.ipady = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        jPanel1.add(jPanel3, gridBagConstraints);
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 111, 700, 410));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -233,9 +130,9 @@ public class EliminarUsuario extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -254,14 +151,46 @@ public class EliminarUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaEliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaEliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaEliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaEliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -298,26 +227,51 @@ public class EliminarUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EliminarUsuario().setVisible(true);
+                new VistaEliminarUsuario().setVisible(true);
             }
         });
     }
 
+    public JButton getBtnEliminar() {
+        return btnEliminar;
+    }
+
+    public void setBtnEliminar(JButton btnEliminar) {
+        this.btnEliminar = btnEliminar;
+    }
+
+    public JButton getBtnVolverAtras() {
+        return btnVolverAtras;
+    }
+
+    public void setBtnVolverAtras(JButton btnVolverAtras) {
+        this.btnVolverAtras = btnVolverAtras;
+    }
+
+    public JTextField getEntradaUsuario() {
+        return entradaUsuario;
+    }
+
+    public void setEntradaUsuario(JTextField entradaUsuario) {
+        this.entradaUsuario = entradaUsuario;
+    }
+
+    public JLabel getTxtError() {
+        return txtError;
+    }
+
+    public void setTxtError(JLabel txtError) {
+        this.txtError = txtError;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JFrame jFrame1;
-    private javax.swing.JFrame jFrame2;
-    private javax.swing.JFrame jFrame3;
-    private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnVolverAtras;
+    private javax.swing.JTextField entradaUsuario;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -325,11 +279,6 @@ public class EliminarUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JToggleButton jToggleButton1;
-    private java.awt.Label label2;
+    private javax.swing.JLabel txtError;
     // End of variables declaration//GEN-END:variables
 }

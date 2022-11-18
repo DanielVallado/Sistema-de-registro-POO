@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
+import javax.swing.JButton;
 
-/**
- *
- * @author esaup
- */
 public class MenuAdmin extends javax.swing.JFrame {
 
     /**
@@ -40,15 +32,14 @@ public class MenuAdmin extends javax.swing.JFrame {
         jFrame3 = new javax.swing.JFrame();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnObra = new javax.swing.JButton();
+        btnFuncion = new javax.swing.JButton();
+        btnUsuario = new javax.swing.JButton();
+        btnReporte = new javax.swing.JButton();
+        btnCerrarSesion = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
 
         label2.setText("label2");
 
@@ -111,80 +102,80 @@ public class MenuAdmin extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menú Administardor");
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(28, 12, 91));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Menú Administrador ");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 90));
-
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setBackground(new java.awt.Color(28, 12, 91));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Crear funcion");
-        jButton4.setBorderPainted(false);
-        jButton4.setFocusPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnObra.setBackground(new java.awt.Color(28, 12, 91));
+        btnObra.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnObra.setForeground(new java.awt.Color(255, 255, 255));
+        btnObra.setText("Obra ");
+        btnObra.setBorderPainted(false);
+        btnObra.setFocusPainted(false);
+        btnObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnObraActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 160, 60));
+        jPanel3.add(btnObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 160, 60));
 
-        jButton2.setBackground(new java.awt.Color(28, 12, 91));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Modificar funcion");
-        jButton2.setBorderPainted(false);
-        jButton2.setFocusPainted(false);
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 160, 60));
+        btnFuncion.setBackground(new java.awt.Color(28, 12, 91));
+        btnFuncion.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnFuncion.setForeground(new java.awt.Color(255, 255, 255));
+        btnFuncion.setText("Funcion");
+        btnFuncion.setBorderPainted(false);
+        btnFuncion.setFocusPainted(false);
+        jPanel3.add(btnFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 160, 60));
 
-        jLabel7.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel7.setText("¿Qué acción desea realizar?");
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 380, -1));
-
-        jButton1.setBackground(new java.awt.Color(28, 12, 91));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Eliminar usuario");
-        jButton1.setBorderPainted(false);
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnUsuario.setBackground(new java.awt.Color(28, 12, 91));
+        btnUsuario.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        btnUsuario.setText("Usuario");
+        btnUsuario.setBorderPainted(false);
+        btnUsuario.setFocusPainted(false);
+        btnUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnUsuarioActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 160, 60));
+        jPanel3.add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 160, 60));
 
-        jButton3.setBackground(new java.awt.Color(28, 12, 91));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Eliminar funcion");
-        jButton3.setBorderPainted(false);
-        jButton3.setFocusPainted(false);
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 160, 60));
+        btnReporte.setBackground(new java.awt.Color(28, 12, 91));
+        btnReporte.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnReporte.setForeground(new java.awt.Color(255, 255, 255));
+        btnReporte.setText("Reporte");
+        btnReporte.setBorderPainted(false);
+        btnReporte.setFocusPainted(false);
+        btnReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReporteActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 160, 60));
 
-        jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 124, 186));
-        jButton5.setText("Cerrar sesión ");
-        jButton5.setBorderPainted(false);
-        jButton5.setFocusPainted(false);
-        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 150, 30));
+        btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnCerrarSesion.setForeground(new java.awt.Color(0, 124, 186));
+        btnCerrarSesion.setText("Cerrar sesión ");
+        btnCerrarSesion.setBorderPainted(false);
+        btnCerrarSesion.setFocusPainted(false);
+        jPanel3.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 140, 30));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 700, 410));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 700, 420));
+
+        jPanel4.setBackground(new java.awt.Color(28, 12, 91));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Menú Administrador");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, 40));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -201,13 +192,17 @@ public class MenuAdmin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnUsuarioActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnObraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnObraActionPerformed
+
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnReporteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,13 +239,57 @@ public class MenuAdmin extends javax.swing.JFrame {
             }
         });
     }
+    
+    public JButton getBtnCerrarSesion() {
+        return btnCerrarSesion;
+    }
+
+    public void setBtnCerrarSesion(JButton btnCerrarSesion) {
+        this.btnCerrarSesion = btnCerrarSesion;
+    }
+
+    public JButton getBtnFuncion() {
+        return btnFuncion;
+    }
+
+    public void setBtnFuncion(JButton btnFuncion) {
+        this.btnFuncion = btnFuncion;
+    }
+
+    public JButton getBtnObra() {
+        return btnObra;
+    }
+
+    public void setBtnObra(JButton btnObra) {
+        this.btnObra = btnObra;
+    }
+
+    public JButton getBtnReporte() {
+        return btnReporte;
+    }
+
+    public void setBtnReporte(JButton btnReporte) {
+        this.btnReporte = btnReporte;
+    }
+
+    public JButton getBtnUsuario() {
+        return btnUsuario;
+    }
+
+    public void setBtnUsuario(JButton btnUsuario) {
+        this.btnUsuario = btnUsuario;
+    }
+
+    public Object getbtnUsuario() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnFuncion;
+    private javax.swing.JButton btnObra;
+    private javax.swing.JButton btnReporte;
+    private javax.swing.JButton btnUsuario;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JFrame jFrame3;
@@ -260,13 +299,13 @@ public class MenuAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JToggleButton jToggleButton1;
     private java.awt.Label label2;
     // End of variables declaration//GEN-END:variables
+
 }

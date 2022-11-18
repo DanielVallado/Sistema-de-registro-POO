@@ -6,6 +6,7 @@
 package vista;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -13,12 +14,12 @@ import javax.swing.JTextField;
  *
  * @author danie
  */
-public class Index extends javax.swing.JFrame {
+public class VistaIndex extends javax.swing.JFrame {
 
     /**
      * Creates new form Index
      */
-    public Index() {
+    public VistaIndex() {
         initComponents();
     }
 
@@ -44,6 +45,7 @@ public class Index extends javax.swing.JFrame {
         entradaContrasena = new javax.swing.JPasswordField();
         botonLogin = new javax.swing.JButton();
         botonRegistro = new javax.swing.JButton();
+        txtError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -58,10 +60,10 @@ public class Index extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(28, 12, 91));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Verdana", 0, 30)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("INICIO DE SESIÓN");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, 50));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, 50));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 70));
 
@@ -151,6 +153,11 @@ public class Index extends javax.swing.JFrame {
         });
         jPanel2.add(botonRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, -1, -1));
 
+        txtError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtError.setForeground(new java.awt.Color(255, 0, 0));
+        txtError.setText("Error");
+        jPanel2.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 380));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -193,20 +200,21 @@ public class Index extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaIndex.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaIndex.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaIndex.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaIndex.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Index().setVisible(true);
+                new VistaIndex().setVisible(true);
             }
         });
     }
@@ -226,6 +234,14 @@ public class Index extends javax.swing.JFrame {
     public JTextField getEntradaUsuario() {
         return entradaUsuario;
     }
+
+    public JLabel getTxtError() {
+        return txtError;
+    }
+
+    public void setTxtError(JLabel txtError) {
+        this.txtError = txtError;
+    }
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonLogin;
@@ -241,5 +257,6 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel txtError;
     // End of variables declaration//GEN-END:variables
 }

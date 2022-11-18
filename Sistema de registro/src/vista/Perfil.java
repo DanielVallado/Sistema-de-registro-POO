@@ -5,6 +5,9 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author danie
@@ -29,18 +32,23 @@ public class Perfil extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnPerfil = new javax.swing.JButton();
+        btnInicio = new javax.swing.JButton();
+        btnReservar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
+        txtCurp = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        txtNombre = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        txtUsuario = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
+        txtApellido = new javax.swing.JLabel();
+        btnCerrarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Perfil");
@@ -51,37 +59,40 @@ public class Perfil extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(28, 12, 91));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(28, 12, 91));
-        jButton1.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Perfil");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setFocusPainted(false);
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 110, 60));
+        btnPerfil.setBackground(new java.awt.Color(28, 12, 91));
+        btnPerfil.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
+        btnPerfil.setForeground(new java.awt.Color(255, 255, 255));
+        btnPerfil.setText("Perfil");
+        btnPerfil.setBorder(null);
+        btnPerfil.setBorderPainted(false);
+        btnPerfil.setDefaultCapable(false);
+        btnPerfil.setFocusPainted(false);
+        jPanel2.add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 110, 60));
 
-        jButton3.setBackground(new java.awt.Color(28, 12, 91));
-        jButton3.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Inicio");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setFocusPainted(false);
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 110, 60));
+        btnInicio.setBackground(new java.awt.Color(28, 12, 91));
+        btnInicio.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
+        btnInicio.setForeground(new java.awt.Color(255, 255, 255));
+        btnInicio.setText("Inicio");
+        btnInicio.setBorder(null);
+        btnInicio.setBorderPainted(false);
+        btnInicio.setDefaultCapable(false);
+        btnInicio.setFocusPainted(false);
+        jPanel2.add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 110, 60));
 
-        jButton4.setBackground(new java.awt.Color(28, 12, 91));
-        jButton4.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Reservar");
-        jButton4.setBorder(null);
-        jButton4.setBorderPainted(false);
-        jButton4.setFocusPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnReservar.setBackground(new java.awt.Color(28, 12, 91));
+        btnReservar.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 18)); // NOI18N
+        btnReservar.setForeground(new java.awt.Color(255, 255, 255));
+        btnReservar.setText("Reservar");
+        btnReservar.setBorder(null);
+        btnReservar.setBorderPainted(false);
+        btnReservar.setDefaultCapable(false);
+        btnReservar.setFocusPainted(false);
+        btnReservar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnReservarActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 120, 60));
+        jPanel2.add(btnReservar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 120, 60));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 80));
 
@@ -109,64 +120,53 @@ public class Perfil extends javax.swing.JFrame {
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        txtCurp.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtCurp.setForeground(new java.awt.Color(0, 0, 0));
+        txtCurp.setText("Curp");
+        jPanel4.add(txtCurp, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 310, 30));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, 330, 30));
 
         jPanel5.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        txtNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtNombre.setForeground(new java.awt.Color(0, 0, 0));
+        txtNombre.setText("Nombre");
+        jPanel5.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 310, 30));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        txtUsuario.setText("Usuario");
+        jPanel6.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 310, 30));
 
         jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 330, 30));
 
         jPanel7.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
+        txtApellido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtApellido.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellido.setText("Apellido");
+        jPanel7.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 310, 30));
 
         jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 330, 30));
+
+        btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setFont(new java.awt.Font("Verdana", 0, 16)); // NOI18N
+        btnCerrarSesion.setForeground(new java.awt.Color(0, 124, 186));
+        btnCerrarSesion.setText("Cerrar sesión ");
+        btnCerrarSesion.setBorderPainted(false);
+        btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrarSesion.setFocusPainted(false);
+        jPanel3.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 150, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 700, 420));
 
@@ -185,9 +185,9 @@ public class Perfil extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnReservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnReservarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,10 +225,61 @@ public class Perfil extends javax.swing.JFrame {
         });
     }
 
+    public JButton getBtnCerrarSesion() {
+        return btnCerrarSesion;
+    }
+
+    public JButton getBtnInicio() {
+        return btnInicio;
+    }
+
+    public JButton getBtnPerfil() {
+        return btnPerfil;
+    }
+
+    public JButton getBtnReservar() {
+        return btnReservar;
+    }
+
+    public JLabel getTxtApellido() {
+        return txtApellido;
+    }
+
+    public void setTxtApellido(JLabel txtApellido) {
+        this.txtApellido = txtApellido;
+    }
+
+    public JLabel getTxtCurp() {
+        return txtCurp;
+    }
+
+    public void setTxtCurp(JLabel txtCurp) {
+        this.txtCurp = txtCurp;
+    }
+
+    public JLabel getTxtNombre() {
+        return txtNombre;
+    }
+
+    public void setTxtNombre(JLabel txtNombre) {
+        this.txtNombre = txtNombre;
+    }
+
+    public JLabel getTxtUsuario() {
+        return txtUsuario;
+    }
+
+    public void setTxtUsuario(JLabel txtUsuario) {
+        this.txtUsuario = txtUsuario;
+    }
+
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnInicio;
+    private javax.swing.JButton btnPerfil;
+    private javax.swing.JButton btnReservar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -240,5 +291,9 @@ public class Perfil extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JLabel txtApellido;
+    private javax.swing.JLabel txtCurp;
+    private javax.swing.JLabel txtNombre;
+    private javax.swing.JLabel txtUsuario;
     // End of variables declaration//GEN-END:variables
 }
