@@ -175,6 +175,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Obra "/>
                 <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
@@ -199,6 +202,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Funcion"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Constraints>
@@ -220,6 +226,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Usuario"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
@@ -244,6 +253,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Reporte"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
@@ -268,6 +280,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cerrar sesi&#xf3;n "/>
                 <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Constraints>

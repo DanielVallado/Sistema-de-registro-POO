@@ -50,6 +50,7 @@ public class VistaObra extends javax.swing.JFrame {
         btnVolverAtras.setForeground(new java.awt.Color(0, 124, 186));
         btnVolverAtras.setText("Volver atrás");
         btnVolverAtras.setBorderPainted(false);
+        btnVolverAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolverAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverAtrasActionPerformed(evt);
@@ -67,7 +68,9 @@ public class VistaObra extends javax.swing.JFrame {
         btnCrearObra.setForeground(new java.awt.Color(255, 255, 255));
         btnCrearObra.setText("Crear obra");
         btnCrearObra.setBorderPainted(false);
+        btnCrearObra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCrearObra.setDefaultCapable(false);
+        btnCrearObra.setFocusPainted(false);
         btnCrearObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearObraActionPerformed(evt);
@@ -80,7 +83,9 @@ public class VistaObra extends javax.swing.JFrame {
         btnModificarObra.setForeground(new java.awt.Color(255, 255, 255));
         btnModificarObra.setText("Modificar obra");
         btnModificarObra.setBorderPainted(false);
+        btnModificarObra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnModificarObra.setDefaultCapable(false);
+        btnModificarObra.setFocusPainted(false);
         jPanel2.add(btnModificarObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 190, 80));
 
         btnEliminarObra.setBackground(new java.awt.Color(28, 12, 91));
@@ -88,7 +93,9 @@ public class VistaObra extends javax.swing.JFrame {
         btnEliminarObra.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminarObra.setText("Eliminar obra");
         btnEliminarObra.setBorderPainted(false);
+        btnEliminarObra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminarObra.setDefaultCapable(false);
+        btnEliminarObra.setFocusPainted(false);
         btnEliminarObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarObraActionPerformed(evt);

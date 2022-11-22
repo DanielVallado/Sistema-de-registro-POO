@@ -4,12 +4,12 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class VistaEliminarUsuario extends javax.swing.JFrame {
+public class VistaPreModificarUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form usuario
      */
-    public VistaEliminarUsuario() {
+    public VistaPreModificarUsuario() {
         initComponents();
     }
 
@@ -26,10 +26,8 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        btnEliminar = new javax.swing.JButton();
+        btnModificarUsuario = new javax.swing.JButton();
         btnVolverAtras = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         entradaUsuario = new javax.swing.JTextField();
@@ -37,7 +35,7 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Eliminar Usuarios");
+        setTitle("Modificar Usuario");
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -47,7 +45,7 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Eliminar Usuarios");
+        jLabel10.setText("Modificar Usuario");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, 70));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 700, 90));
@@ -55,19 +53,19 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnEliminar.setBackground(new java.awt.Color(0, 124, 186));
-        btnEliminar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminar.setText("Eliminar usuario");
-        btnEliminar.setBorderPainted(false);
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEliminar.setFocusPainted(false);
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarUsuario.setBackground(new java.awt.Color(0, 124, 186));
+        btnModificarUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnModificarUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        btnModificarUsuario.setText("Modificar usuario");
+        btnModificarUsuario.setBorderPainted(false);
+        btnModificarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnModificarUsuario.setFocusPainted(false);
+        btnModificarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
+                btnModificarUsuarioActionPerformed(evt);
             }
         });
-        jPanel3.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 170, 50));
+        jPanel3.add(btnModificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 190, 50));
 
         btnVolverAtras.setBackground(new java.awt.Color(255, 255, 255));
         btnVolverAtras.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -78,20 +76,10 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
         btnVolverAtras.setFocusPainted(false);
         jPanel3.add(btnVolverAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 120, 30));
 
-        jLabel9.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel9.setText("Recuerda que no se puede recuperar las cuentas eliminadas, ");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel7.setText("en caso de equivocación se tendrá que crear una desde cero.");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
-
         jLabel11.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 124, 186));
         jLabel11.setText("Nombre de usuario:");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(205, 205, 205));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -107,18 +95,18 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
         });
         jPanel4.add(entradaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 620, 40));
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 640, 40));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 640, 40));
 
         txtError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtError.setForeground(new java.awt.Color(255, 0, 51));
         txtError.setText("Error");
-        jPanel3.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        jPanel3.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 124, 186));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Llena los siguientes datos");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+        jLabel8.setText("Coloca el nombre del usuario a modificar");
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, 700, 430));
 
@@ -137,9 +125,9 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+    private void btnModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarActionPerformed
+    }//GEN-LAST:event_btnModificarUsuarioActionPerformed
 
     private void entradaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradaUsuarioActionPerformed
         // TODO add your handling code here:
@@ -148,6 +136,7 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -162,14 +151,78 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaEliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaPreModificarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaEliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaPreModificarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaEliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaPreModificarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaEliminarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaPreModificarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -238,33 +291,21 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaEliminarUsuario().setVisible(true);
+                new VistaPreModificarUsuario().setVisible(true);
             }
         });
     }
 
-    public JButton getBtnEliminar() {
-        return btnEliminar;
-    }
-
-    public void setBtnEliminar(JButton btnEliminar) {
-        this.btnEliminar = btnEliminar;
+    public JButton getBtnModificarUsuario() {
+        return btnModificarUsuario;
     }
 
     public JButton getBtnVolverAtras() {
         return btnVolverAtras;
     }
 
-    public void setBtnVolverAtras(JButton btnVolverAtras) {
-        this.btnVolverAtras = btnVolverAtras;
-    }
-
     public JTextField getEntradaUsuario() {
         return entradaUsuario;
-    }
-
-    public void setEntradaUsuario(JTextField entradaUsuario) {
-        this.entradaUsuario = entradaUsuario;
     }
 
     public JLabel getTxtError() {
@@ -274,18 +315,14 @@ public class VistaEliminarUsuario extends javax.swing.JFrame {
     public void setTxtError(JLabel txtError) {
         this.txtError = txtError;
     }
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnModificarUsuario;
     private javax.swing.JButton btnVolverAtras;
     private javax.swing.JTextField entradaUsuario;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

@@ -1,11 +1,12 @@
 package vista;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class VistaCrearObra extends javax.swing.JFrame {
+public class VistaModificarUsuario extends javax.swing.JFrame {
 
-    public VistaCrearObra() {
+    public VistaModificarUsuario() {
         initComponents();
     }
 
@@ -22,11 +23,10 @@ public class VistaCrearObra extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        btnCrearObra = new javax.swing.JButton();
+        btnModificarDatos = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        entradaGenero = new javax.swing.JTextField();
+        entradaNombre = new javax.swing.JTextField();
         btnVolverAtras = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
         txtError = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -36,21 +36,19 @@ public class VistaCrearObra extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         entradaResumen = new javax.swing.JTextField();
-        entradaPrecio1 = new javax.swing.JTextField();
+        entradaApellido = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
-        entradaDuracion = new javax.swing.JTextField();
+        entradaCurp = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
-        entradaPrimerActor = new javax.swing.JTextField();
-        jPanel8 = new javax.swing.JPanel();
-        entradaPrecio = new javax.swing.JTextField();
+        entradaContrasena = new javax.swing.JPasswordField();
         jPanel9 = new javax.swing.JPanel();
-        entradaNombre = new javax.swing.JTextField();
+        entradaUsuario = new javax.swing.JTextField();
         jPanel10 = new javax.swing.JPanel();
-        entradaSegundoActor = new javax.swing.JTextField();
+        entradaConfirmacion = new javax.swing.JPasswordField();
         jPanel11 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Crear Obra");
+        setTitle("Modificar Perfil");
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -60,38 +58,38 @@ public class VistaCrearObra extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("CREAR OBRA");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, 70));
+        jLabel10.setText("MODIFICAR PERFIL DE USUARIO");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, 70));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 700, 90));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCrearObra.setBackground(new java.awt.Color(0, 124, 186));
-        btnCrearObra.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnCrearObra.setForeground(new java.awt.Color(255, 255, 255));
-        btnCrearObra.setText("Crear obra");
-        btnCrearObra.setBorderPainted(false);
-        btnCrearObra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCrearObra.setFocusPainted(false);
-        btnCrearObra.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarDatos.setBackground(new java.awt.Color(0, 124, 186));
+        btnModificarDatos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnModificarDatos.setForeground(new java.awt.Color(255, 255, 255));
+        btnModificarDatos.setText("Modificar datos");
+        btnModificarDatos.setBorderPainted(false);
+        btnModificarDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnModificarDatos.setFocusPainted(false);
+        btnModificarDatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCrearObraActionPerformed(evt);
+                btnModificarDatosActionPerformed(evt);
             }
         });
-        jPanel3.add(btnCrearObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 170, 50));
+        jPanel3.add(btnModificarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 170, 50));
 
         jPanel4.setBackground(new java.awt.Color(205, 205, 205));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        entradaGenero.setBackground(new java.awt.Color(205, 205, 205));
-        entradaGenero.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaGenero.setForeground(new java.awt.Color(0, 124, 186));
-        entradaGenero.setBorder(null);
-        jPanel4.add(entradaGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
+        entradaNombre.setBackground(new java.awt.Color(205, 205, 205));
+        entradaNombre.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaNombre.setForeground(new java.awt.Color(0, 124, 186));
+        entradaNombre.setBorder(null);
+        jPanel4.add(entradaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 530, 30));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 530, 30));
 
         btnVolverAtras.setBackground(new java.awt.Color(255, 255, 255));
         btnVolverAtras.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -102,45 +100,40 @@ public class VistaCrearObra extends javax.swing.JFrame {
         btnVolverAtras.setFocusPainted(false);
         jPanel3.add(btnVolverAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 120, 30));
 
-        jLabel11.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel11.setText("Precio del boleto:");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, 30));
-
         txtError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtError.setForeground(new java.awt.Color(255, 0, 51));
         txtError.setText("Error");
-        jPanel3.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+        jPanel3.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel12.setText("Nombre de obra:");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 18, 150, 30));
+        jLabel12.setText("Usuario:");
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 80, 30));
 
         jLabel13.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel13.setText("Género:");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, 30));
+        jLabel13.setText("Nombre:");
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 80, 30));
 
         jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel14.setText("Resumen:");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, 40));
+        jLabel14.setText("Apellido:");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 80, 30));
 
         jLabel15.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel15.setText("Duración:");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 30));
+        jLabel15.setText("CURP:");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 60, 30));
 
         jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel16.setText("Primer actor:");
-        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, 30));
+        jLabel16.setText("Contraseña:");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 100, 30));
 
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel17.setText("Segundo actor:");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, 30));
+        jLabel17.setText("Confirmar:");
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 90, 30));
 
         jPanel5.setBackground(new java.awt.Color(205, 205, 205));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -149,70 +142,59 @@ public class VistaCrearObra extends javax.swing.JFrame {
         entradaResumen.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         entradaResumen.setForeground(new java.awt.Color(0, 124, 186));
         entradaResumen.setBorder(null);
-        jPanel5.add(entradaResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 50));
+        jPanel5.add(entradaResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 510, 30));
 
-        entradaPrecio1.setBackground(new java.awt.Color(205, 205, 205));
-        entradaPrecio1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaPrecio1.setForeground(new java.awt.Color(0, 124, 186));
-        entradaPrecio1.setBorder(null);
-        jPanel5.add(entradaPrecio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 460, 30));
+        entradaApellido.setBackground(new java.awt.Color(205, 205, 205));
+        entradaApellido.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaApellido.setForeground(new java.awt.Color(0, 124, 186));
+        entradaApellido.setBorder(null);
+        jPanel5.add(entradaApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
-        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 530, 50));
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 530, 30));
 
         jPanel6.setBackground(new java.awt.Color(205, 205, 205));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        entradaDuracion.setBackground(new java.awt.Color(205, 205, 205));
-        entradaDuracion.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaDuracion.setForeground(new java.awt.Color(0, 124, 186));
-        entradaDuracion.setBorder(null);
-        jPanel6.add(entradaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
+        entradaCurp.setBackground(new java.awt.Color(205, 205, 205));
+        entradaCurp.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaCurp.setForeground(new java.awt.Color(0, 124, 186));
+        entradaCurp.setBorder(null);
+        jPanel6.add(entradaCurp, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
-        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 530, 30));
+        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 530, 30));
 
         jPanel7.setBackground(new java.awt.Color(205, 205, 205));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        entradaPrimerActor.setBackground(new java.awt.Color(205, 205, 205));
-        entradaPrimerActor.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaPrimerActor.setForeground(new java.awt.Color(0, 124, 186));
-        entradaPrimerActor.setBorder(null);
-        jPanel7.add(entradaPrimerActor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
+        entradaContrasena.setBackground(new java.awt.Color(205, 205, 205));
+        entradaContrasena.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaContrasena.setForeground(new java.awt.Color(0, 124, 186));
+        entradaContrasena.setBorder(null);
+        jPanel7.add(entradaContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
-        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 530, 30));
-
-        jPanel8.setBackground(new java.awt.Color(205, 205, 205));
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        entradaPrecio.setBackground(new java.awt.Color(205, 205, 205));
-        entradaPrecio.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaPrecio.setForeground(new java.awt.Color(0, 124, 186));
-        entradaPrecio.setBorder(null);
-        jPanel8.add(entradaPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
-
-        jPanel3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 530, 30));
+        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 530, 30));
 
         jPanel9.setBackground(new java.awt.Color(205, 205, 205));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        entradaNombre.setBackground(new java.awt.Color(205, 205, 205));
-        entradaNombre.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaNombre.setForeground(new java.awt.Color(0, 124, 186));
-        entradaNombre.setBorder(null);
-        jPanel9.add(entradaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
+        entradaUsuario.setBackground(new java.awt.Color(205, 205, 205));
+        entradaUsuario.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaUsuario.setForeground(new java.awt.Color(0, 124, 186));
+        entradaUsuario.setBorder(null);
+        jPanel9.add(entradaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
-        jPanel3.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 530, 30));
+        jPanel3.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 530, 30));
 
         jPanel10.setBackground(new java.awt.Color(205, 205, 205));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        entradaSegundoActor.setBackground(new java.awt.Color(205, 205, 205));
-        entradaSegundoActor.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaSegundoActor.setForeground(new java.awt.Color(0, 124, 186));
-        entradaSegundoActor.setBorder(null);
-        jPanel10.add(entradaSegundoActor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
+        entradaConfirmacion.setBackground(new java.awt.Color(205, 205, 205));
+        entradaConfirmacion.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaConfirmacion.setForeground(new java.awt.Color(0, 124, 186));
+        entradaConfirmacion.setBorder(null);
+        jPanel10.add(entradaConfirmacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
-        jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 530, 30));
+        jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 530, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, 700, 430));
 
@@ -244,9 +226,9 @@ public class VistaCrearObra extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCrearObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearObraActionPerformed
+    private void btnModificarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarDatosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCrearObraActionPerformed
+    }//GEN-LAST:event_btnModificarDatosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,14 +248,270 @@ public class VistaCrearObra extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaCrearObra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaModificarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaCrearObra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaModificarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaCrearObra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaModificarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaCrearObra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaModificarUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -534,45 +772,65 @@ public class VistaCrearObra extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaCrearObra().setVisible(true);
+                new VistaModificarUsuario().setVisible(true);
             }
         });
     }
 
-    public JButton getBtnCrearObra() {
-        return btnCrearObra;
+    public JButton getBtnModificarDatos() {
+        return btnModificarDatos;
     }
 
     public JButton getBtnVolverAtras() {
         return btnVolverAtras;
     }
-
-    public JTextField getEntradaDuracion() {
-        return entradaDuracion;
+        
+    public JTextField getEntradaApellido() {
+        return entradaApellido;
     }
 
-    public JTextField getEntradaGenero() {
-        return entradaGenero;
+    public void setEntradaApellido(JTextField entradaApellido) {
+        this.entradaApellido = entradaApellido;
     }
 
-    public JTextField getEntradaPrecio() {
-        return entradaPrecio;
+    public JPasswordField getEntradaConfirmacion() {
+        return entradaConfirmacion;
     }
 
-    public JTextField getEntradaPrimerActor() {
-        return entradaPrimerActor;
+    public JPasswordField getEntradaContrasena() {
+        return entradaContrasena;
+    }
+    
+    public JTextField getEntradaCurp() {
+        return entradaCurp;
+    }
+
+    public void setEntradaCurp(JTextField entradaCurp) {
+        this.entradaCurp = entradaCurp;
+    }
+
+    public JTextField getEntradaNombre() {
+        return entradaNombre;
+    }
+
+    public void setEntradaNombre(JTextField entradaNombre) {
+        this.entradaNombre = entradaNombre;
     }
 
     public JTextField getEntradaResumen() {
         return entradaResumen;
     }
 
-    public JTextField getEntradaSegundoActor() {
-        return entradaSegundoActor;
+    public void setEntradaResumen(JTextField entradaResumen) {
+        this.entradaResumen = entradaResumen;
     }
 
-    public JTextField getEntradaNombre() {
-        return entradaNombre;
+    public JTextField getEntradaUsuario() {
+        return entradaUsuario;
+    }
+
+    public void setEntradaUsuario(JTextField entradaUsuario) {
+        this.entradaUsuario = entradaUsuario;
     }
 
     public JLabel getTxtError() {
@@ -584,20 +842,18 @@ public class VistaCrearObra extends javax.swing.JFrame {
     }
 
     
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCrearObra;
+    private javax.swing.JButton btnModificarDatos;
     private javax.swing.JButton btnVolverAtras;
-    private javax.swing.JTextField entradaDuracion;
-    private javax.swing.JTextField entradaGenero;
+    private javax.swing.JTextField entradaApellido;
+    private javax.swing.JPasswordField entradaConfirmacion;
+    private javax.swing.JPasswordField entradaContrasena;
+    private javax.swing.JTextField entradaCurp;
     private javax.swing.JTextField entradaNombre;
-    private javax.swing.JTextField entradaPrecio;
-    private javax.swing.JTextField entradaPrecio1;
-    private javax.swing.JTextField entradaPrimerActor;
     private javax.swing.JTextField entradaResumen;
-    private javax.swing.JTextField entradaSegundoActor;
+    private javax.swing.JTextField entradaUsuario;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -613,7 +869,6 @@ public class VistaCrearObra extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel txtError;
     // End of variables declaration//GEN-END:variables

@@ -44,6 +44,7 @@ public class VistaUsuario extends javax.swing.JFrame {
         btnVolverAtras.setForeground(new java.awt.Color(0, 124, 186));
         btnVolverAtras.setText("Volver atrás");
         btnVolverAtras.setBorderPainted(false);
+        btnVolverAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolverAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVolverAtrasActionPerformed(evt);

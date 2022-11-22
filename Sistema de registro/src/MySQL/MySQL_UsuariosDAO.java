@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Usuario;
+import modelo.UsuarioAdministrador;
 import modelo.UsuarioCliente;
 
 public class MySQL_UsuariosDAO {
@@ -89,12 +90,43 @@ public class MySQL_UsuariosDAO {
         return false;    
     }
 
-    public boolean modificar(String usuario, String nombre, String apellido, String curp, String contrasena) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean modificarUsuario(String usuario, String usuarioN, String nombre, String apellido, String curp, String contrasena) {
+       try {
+            String query = "UPDATE usuarios SET usuario=?, nombre=?, apellido=?, curp=?, contrasena=? WHERE usuario=?";
+            PreparedStatement ps = ConexionBD.conectar().prepareStatement(query);
+            ps.setString(1, usuarioN);
+            ps.setString(2, nombre);
+            ps.setString(3, apellido);
+            ps.setString(4, curp);
+            ps.setString(5, contrasena);
+            ps.setString(6, usuario);
+            ps.executeUpdate();
+            ps.close();
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQL_UsuariosDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return false;
     }
 
-    public Usuario obtenerAdmin(String usuario, String nombre, String apellido) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Usuario obtenerAdmin(String usuario) {
+        try {
+            String query = "SELECT * FROM administradores WHERE usuario=?";
+            PreparedStatement ps = ConexionBD.conectar().prepareStatement(query);
+            ps.setString(1, usuario);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            String nombre = rs.getString(3);
+            String apellido = rs.getString(4);
+            String contrasena = rs.getString(5);
+            UsuarioAdministrador usuarioActivo = new UsuarioAdministrador(usuario, nombre, apellido, contrasena);
+            return usuarioActivo;
+        } catch (SQLException ex){
+            Logger.getLogger(MySQL_UsuariosDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return null;
     }
     
     public static UsuarioCliente obtenerCliente(String usuario) {   
@@ -110,7 +142,7 @@ public class MySQL_UsuariosDAO {
             String contrasena = rs.getString(5);
             UsuarioCliente usuarioActivo = new UsuarioCliente(usuario, nombre, apellido, curp, contrasena);
             return usuarioActivo;
-        } catch (SQLException ex) {
+        } catch (SQLException ex){
             Logger.getLogger(MySQL_UsuariosDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;

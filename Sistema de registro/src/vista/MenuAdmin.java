@@ -115,6 +115,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnObra.setForeground(new java.awt.Color(255, 255, 255));
         btnObra.setText("Obra ");
         btnObra.setBorderPainted(false);
+        btnObra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnObra.setFocusPainted(false);
         btnObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +129,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnFuncion.setForeground(new java.awt.Color(255, 255, 255));
         btnFuncion.setText("Funcion");
         btnFuncion.setBorderPainted(false);
+        btnFuncion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFuncion.setFocusPainted(false);
         jPanel3.add(btnFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 160, 60));
 
@@ -136,6 +138,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnUsuario.setForeground(new java.awt.Color(255, 255, 255));
         btnUsuario.setText("Usuario");
         btnUsuario.setBorderPainted(false);
+        btnUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUsuario.setFocusPainted(false);
         btnUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,6 +152,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnReporte.setForeground(new java.awt.Color(255, 255, 255));
         btnReporte.setText("Reporte");
         btnReporte.setBorderPainted(false);
+        btnReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnReporte.setFocusPainted(false);
         btnReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +166,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnCerrarSesion.setForeground(new java.awt.Color(0, 124, 186));
         btnCerrarSesion.setText("Cerrar sesión ");
         btnCerrarSesion.setBorderPainted(false);
+        btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCerrarSesion.setFocusPainted(false);
         jPanel3.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 140, 30));
 

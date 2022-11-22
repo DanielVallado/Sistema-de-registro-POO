@@ -1,5 +1,4 @@
 package control;
-import MySQL.MySQL_UsuariosDAO;
 import vista.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,7 +20,7 @@ public class ControlRegistro implements ActionListener{
         String usuario, nombre, apellido, curp, contrasena, verificacionContrasena; 
         
         if(vistaRegistro.getBtnRegistro() == evento.getSource()){
-             this.vistaRegistro.getTextError().setVisible(false);
+            this.vistaRegistro.getTextError().setVisible(false);
             usuario = this.vistaRegistro.getEntradaUsuario().getText();
             nombre = this.vistaRegistro.getEntradaNombre().getText();
             apellido = this.vistaRegistro.getEntradaApellido().getText();
@@ -44,7 +43,7 @@ public class ControlRegistro implements ActionListener{
             this.vistaRegistro.getTextError().setText("Hay espacios vacíos");
             this.vistaRegistro.getTextError().setVisible(true);
         } else{         
-            if(Teatro.verificarExistenciaAdministrador(usuario) == true){            
+            if(Teatro.verificarExistenciaAdministrador(usuario) == true){   //modificar         
                 this.vistaRegistro.getTextError().setText("Ya existe ese nombre de usuario");
                 this.vistaRegistro.getTextError().setVisible(true);
             } else{
@@ -72,7 +71,7 @@ public class ControlRegistro implements ActionListener{
             vistaIndex.setVisible(true);
             this.vistaRegistro.dispose();
         } else{
-            System.out.println("Error al insertar");
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error en el registro", "Registo fallido", JOptionPane.ERROR_MESSAGE);
         }  
     }
 }

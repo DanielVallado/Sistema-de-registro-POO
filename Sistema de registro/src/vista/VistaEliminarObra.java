@@ -28,22 +28,24 @@ public class VistaEliminarObra extends javax.swing.JFrame {
         btnEliminar = new javax.swing.JButton();
         btnVolver = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        entradaNombre = new javax.swing.JTextField();
         txtError = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        entradaNombre = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Eliminar Obra");
         setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(28, 12, 91));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 36)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Eliminar Obra");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, 50));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -51,8 +53,9 @@ public class VistaEliminarObra extends javax.swing.JFrame {
         btnEliminar.setBackground(new java.awt.Color(0, 124, 186));
         btnEliminar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminar.setText("Eliminar");
+        btnEliminar.setText("Eliminar obra");
         btnEliminar.setBorderPainted(false);
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.setDefaultCapable(false);
         btnEliminar.setFocusPainted(false);
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -60,47 +63,53 @@ public class VistaEliminarObra extends javax.swing.JFrame {
                 btnEliminarActionPerformed(evt);
             }
         });
-        jPanel3.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 160, 40));
+        jPanel3.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 170, 50));
 
         btnVolver.setBackground(new java.awt.Color(255, 255, 255));
         btnVolver.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnVolver.setForeground(new java.awt.Color(0, 124, 186));
         btnVolver.setText("Volver atrás");
         btnVolver.setBorderPainted(false);
+        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolver.setFocusPainted(false);
-        jPanel3.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 120, 30));
+        jPanel3.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 120, 30));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 124, 186));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Llena los siguientes datos para eliminar la Obra");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        jLabel8.setText("Llena los siguientes datos");
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel9.setText("Recuerda que no se puede recuperar la obra, ");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel7.setText("en caso de equivocación se tendrá que reagendar una desde cero.");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 124, 186));
         jLabel11.setText("Nombre de la obra:");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+
+        txtError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtError.setForeground(new java.awt.Color(255, 0, 51));
+        txtError.setText("Error");
+        jPanel3.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         entradaNombre.setBackground(new java.awt.Color(205, 205, 205));
         entradaNombre.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         entradaNombre.setForeground(new java.awt.Color(0, 124, 186));
         entradaNombre.setBorder(null);
-        jPanel3.add(entradaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 350, 30));
+        jPanel1.add(entradaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 610, 40));
 
-        txtError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtError.setForeground(new java.awt.Color(255, 0, 51));
-        txtError.setText("Error");
-        jPanel3.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, -1, -1));
+        jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 630, 40));
+
+        jLabel10.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel10.setText("Recuerda que no se puede recuperar las obras eliminadas, ");
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel12.setText("en caso de equivocación se tendrá que crear una desde cero.");
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,13 +126,13 @@ public class VistaEliminarObra extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGap(0, 520, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, 0)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -209,11 +218,12 @@ public class VistaEliminarObra extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnVolver;
     private javax.swing.JTextField entradaNombre;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel txtError;

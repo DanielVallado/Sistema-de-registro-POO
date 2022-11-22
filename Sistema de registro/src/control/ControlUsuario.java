@@ -42,7 +42,10 @@ public class ControlUsuario implements ActionListener {
         }
         
         if(vistaUsuario.getBtnModificarUsuario() == evento.getSource()){
-            
+            VistaPreModificarUsuario vistaPreModificarUsuario = new VistaPreModificarUsuario();
+            ControlPreModificarUsuario controlPreModificarUsuario = new ControlPreModificarUsuario(vistaPreModificarUsuario);
+            vistaPreModificarUsuario.setVisible(true);
+            this.vistaUsuario.dispose();
         }
         
         if(vistaUsuario.getBtnEliminarUsuario() == evento.getSource()){

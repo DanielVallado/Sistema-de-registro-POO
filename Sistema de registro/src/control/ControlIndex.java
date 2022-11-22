@@ -10,8 +10,6 @@ public class ControlIndex implements ActionListener{
     
     public ControlIndex(VistaIndex vistaIndex){
         this.vistaIndex = vistaIndex;
-        this.vistaIndex.getEntradaUsuario().addActionListener(this);
-        this.vistaIndex.getEntradaContrasena().addActionListener(this);
         this.vistaIndex.getBotonLogin().addActionListener(this);
         this.vistaIndex.getBotonRegistro().addActionListener(this);
         this.vistaIndex.getTxtError().setVisible(false);
@@ -32,8 +30,7 @@ public class ControlIndex implements ActionListener{
                 this.vistaIndex.dispose();
             } else{
                 
-                if(Teatro.verificarUsuario(usuario, contrasena)){
-                    this.vistaIndex.getTxtError().setVisible(false);
+                if(Teatro.verificarUsuario(usuario, contrasena)){ 
                     MenuUsuario vistaMenuUsuario = new MenuUsuario();
                     UsuarioCliente clienteActivo = Teatro.obtenerCliente(usuario);
                     ControlMenuUsuario controlMenuUsuario = new ControlMenuUsuario(vistaMenuUsuario, clienteActivo);
