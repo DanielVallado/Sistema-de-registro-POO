@@ -1,13 +1,19 @@
 package vista;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class MenuAdmin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form usuario
-     */
     public MenuAdmin() {
         initComponents();
+    }
+    
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/iconoApp.png"));
+        return retValue;
     }
 
     /**
@@ -34,7 +40,6 @@ public class MenuAdmin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         btnObra = new javax.swing.JButton();
-        btnFuncion = new javax.swing.JButton();
         btnUsuario = new javax.swing.JButton();
         btnReporte = new javax.swing.JButton();
         btnCerrarSesion = new javax.swing.JButton();
@@ -103,6 +108,7 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menú Administardor");
+        setIconImage(getIconImage());
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -122,16 +128,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                 btnObraActionPerformed(evt);
             }
         });
-        jPanel3.add(btnObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 160, 60));
-
-        btnFuncion.setBackground(new java.awt.Color(28, 12, 91));
-        btnFuncion.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnFuncion.setForeground(new java.awt.Color(255, 255, 255));
-        btnFuncion.setText("Funcion");
-        btnFuncion.setBorderPainted(false);
-        btnFuncion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnFuncion.setFocusPainted(false);
-        jPanel3.add(btnFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 160, 60));
+        jPanel3.add(btnObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 160, 60));
 
         btnUsuario.setBackground(new java.awt.Color(28, 12, 91));
         btnUsuario.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -145,7 +142,7 @@ public class MenuAdmin extends javax.swing.JFrame {
                 btnUsuarioActionPerformed(evt);
             }
         });
-        jPanel3.add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 160, 60));
+        jPanel3.add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 160, 60));
 
         btnReporte.setBackground(new java.awt.Color(28, 12, 91));
         btnReporte.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -159,16 +156,17 @@ public class MenuAdmin extends javax.swing.JFrame {
                 btnReporteActionPerformed(evt);
             }
         });
-        jPanel3.add(btnReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 160, 60));
+        jPanel3.add(btnReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 160, 60));
 
         btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
         btnCerrarSesion.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnCerrarSesion.setForeground(new java.awt.Color(0, 124, 186));
         btnCerrarSesion.setText("Cerrar sesión ");
         btnCerrarSesion.setBorderPainted(false);
+        btnCerrarSesion.setContentAreaFilled(false);
         btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCerrarSesion.setFocusPainted(false);
-        jPanel3.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 140, 30));
+        jPanel3.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 140, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 700, 420));
 
@@ -177,8 +175,8 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Menú Administrador");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, -1, 40));
+        jLabel8.setText("MENÚ ADMINISTRADOR");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, -1, 40));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 80));
 
@@ -253,14 +251,6 @@ public class MenuAdmin extends javax.swing.JFrame {
         this.btnCerrarSesion = btnCerrarSesion;
     }
 
-    public JButton getBtnFuncion() {
-        return btnFuncion;
-    }
-
-    public void setBtnFuncion(JButton btnFuncion) {
-        this.btnFuncion = btnFuncion;
-    }
-
     public JButton getBtnObra() {
         return btnObra;
     }
@@ -291,7 +281,6 @@ public class MenuAdmin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCerrarSesion;
-    private javax.swing.JButton btnFuncion;
     private javax.swing.JButton btnObra;
     private javax.swing.JButton btnReporte;
     private javax.swing.JButton btnUsuario;

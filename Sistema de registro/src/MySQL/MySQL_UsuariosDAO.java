@@ -1,7 +1,7 @@
 package MySQL;
 import BD.ConexionBD;
 import java.sql.*;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Usuario;
@@ -90,7 +90,7 @@ public class MySQL_UsuariosDAO {
         return false;    
     }
 
-    public boolean modificarUsuario(String usuario, String usuarioN, String nombre, String apellido, String curp, String contrasena) {
+    public static boolean modificarUsuario(String usuario, String usuarioN, String nombre, String apellido, String curp, String contrasena) {
        try {
             String query = "UPDATE usuarios SET usuario=?, nombre=?, apellido=?, curp=?, contrasena=? WHERE usuario=?";
             PreparedStatement ps = ConexionBD.conectar().prepareStatement(query);
@@ -109,8 +109,35 @@ public class MySQL_UsuariosDAO {
         
         return false;
     }
+    
+    public static ArrayList<UsuarioCliente> buscarClientes(String nUsuario) {
+        
+        try {
+            String query = "SELECT * FROM usuarios WHERE usuario LIKE '"+nUsuario+"%'";
+            PreparedStatement ps = ConexionBD.conectar().prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            
+            ArrayList<UsuarioCliente> listaUsuarios = new ArrayList();
+            
+            String nombreUsuario, nombre, apellido, curp, contrasena;
+            
+            while(rs.next()){
+                nombreUsuario = rs.getString(1);
+                nombre = rs.getString(2);
+                apellido = rs.getString(3);
+                curp = rs.getString(4);
+                contrasena = rs.getString(5);
+                UsuarioCliente usuario = new UsuarioCliente(nombreUsuario, nombre, apellido, curp, contrasena);
+                listaUsuarios.add(usuario);
+            }
+            return listaUsuarios;
+        } catch (SQLException ex){
+            Logger.getLogger(MySQL_UsuariosDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    } 
 
-    public Usuario obtenerAdmin(String usuario) {
+    public static Usuario obtenerAdmin(String usuario) {
         try {
             String query = "SELECT * FROM administradores WHERE usuario=?";
             PreparedStatement ps = ConexionBD.conectar().prepareStatement(query);
@@ -129,26 +156,44 @@ public class MySQL_UsuariosDAO {
         return null;
     }
     
-    public static UsuarioCliente obtenerCliente(String usuario) {   
+    public static UsuarioCliente obtenerCliente(String nombreUsuario) {   
         try {
             String query = "SELECT * FROM usuarios WHERE usuario=?";
             PreparedStatement ps = ConexionBD.conectar().prepareStatement(query);
-            ps.setString(1, usuario);
+            ps.setString(1, nombreUsuario);
             ResultSet rs = ps.executeQuery();
             rs.next();
             String nombre = rs.getString(2);
             String apellido = rs.getString(3);
             String curp = rs.getString(4);
             String contrasena = rs.getString(5);
-            UsuarioCliente usuarioActivo = new UsuarioCliente(usuario, nombre, apellido, curp, contrasena);
-            return usuarioActivo;
+            UsuarioCliente usuario = new UsuarioCliente(nombreUsuario, nombre, apellido, curp, contrasena);
+            return usuario;
         } catch (SQLException ex){
             Logger.getLogger(MySQL_UsuariosDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
 
-    public List<Usuario> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static ArrayList<UsuarioCliente> obtenerTodosClientes() {
+        ArrayList<UsuarioCliente> listaUsuarios = new ArrayList();
+        try {
+            String query = "SELECT * FROM usuarios";
+            PreparedStatement ps = ConexionBD.conectar().prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                String nombreUsuario = rs.getString(1);
+                String nombre = rs.getString(2);
+                String apellido = rs.getString(3);
+                String curp = rs.getString(4);
+                String contrasena = rs.getString(5);
+                UsuarioCliente usuario = new UsuarioCliente(nombreUsuario, nombre, apellido, curp, contrasena);
+                listaUsuarios.add(usuario);
+            }
+            return listaUsuarios;
+        } catch (SQLException ex){
+            Logger.getLogger(MySQL_UsuariosDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }   
 }

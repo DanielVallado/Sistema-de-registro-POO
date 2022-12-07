@@ -5,6 +5,8 @@
  */
 package vista;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
@@ -21,6 +23,12 @@ public class VistaIndex extends javax.swing.JFrame {
      */
     public VistaIndex() {
         initComponents();
+    }
+    
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/iconoApp.png"));
+        return retValue;
     }
 
     /**
@@ -48,16 +56,19 @@ public class VistaIndex extends javax.swing.JFrame {
         txtError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Login");
+        setTitle("Iniciar Sesión");
+        setIconImage(getIconImage());
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(205, 205, 205));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setDoubleBuffered(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(28, 12, 91));
+        jPanel3.setDoubleBuffered(false);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
@@ -151,7 +162,7 @@ public class VistaIndex extends javax.swing.JFrame {
                 botonRegistroActionPerformed(evt);
             }
         });
-        jPanel2.add(botonRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, -1, -1));
+        jPanel2.add(botonRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, -1, -1));
 
         txtError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtError.setForeground(new java.awt.Color(255, 0, 0));

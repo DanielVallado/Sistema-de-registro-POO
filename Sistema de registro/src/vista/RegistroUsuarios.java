@@ -5,6 +5,8 @@
  */
 package vista;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
@@ -21,6 +23,12 @@ public class RegistroUsuarios extends javax.swing.JFrame {
      */
     public RegistroUsuarios() {
         initComponents();
+    }
+    
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/iconoApp.png"));
+        return retValue;
     }
 
     /**
@@ -59,6 +67,7 @@ public class RegistroUsuarios extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro");
+        setIconImage(getIconImage());
         setMinimumSize(new java.awt.Dimension(400, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(400, 500));

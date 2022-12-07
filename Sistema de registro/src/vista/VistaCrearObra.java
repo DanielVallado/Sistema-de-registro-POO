@@ -1,5 +1,9 @@
 package vista;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -9,6 +13,12 @@ public class VistaCrearObra extends javax.swing.JFrame {
         initComponents();
     }
 
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/iconoApp.png"));
+        return retValue;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,9 +46,6 @@ public class VistaCrearObra extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         entradaResumen = new javax.swing.JTextField();
-        entradaPrecio1 = new javax.swing.JTextField();
-        jPanel6 = new javax.swing.JPanel();
-        entradaDuracion = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         entradaPrimerActor = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
@@ -47,10 +54,15 @@ public class VistaCrearObra extends javax.swing.JFrame {
         entradaNombre = new javax.swing.JTextField();
         jPanel10 = new javax.swing.JPanel();
         entradaSegundoActor = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        entradaMinutos = new javax.swing.JComboBox<>();
+        entradaHoras = new javax.swing.JComboBox<>();
         jPanel11 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Crear Obra");
+        setIconImage(getIconImage());
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -98,6 +110,7 @@ public class VistaCrearObra extends javax.swing.JFrame {
         btnVolverAtras.setForeground(new java.awt.Color(0, 124, 186));
         btnVolverAtras.setText("Volver atrás");
         btnVolverAtras.setBorderPainted(false);
+        btnVolverAtras.setContentAreaFilled(false);
         btnVolverAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVolverAtras.setFocusPainted(false);
         jPanel3.add(btnVolverAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 120, 30));
@@ -129,8 +142,8 @@ public class VistaCrearObra extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel15.setText("Duración:");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 30));
+        jLabel15.setText("Minutos:");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, 30));
 
         jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 124, 186));
@@ -151,24 +164,7 @@ public class VistaCrearObra extends javax.swing.JFrame {
         entradaResumen.setBorder(null);
         jPanel5.add(entradaResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 50));
 
-        entradaPrecio1.setBackground(new java.awt.Color(205, 205, 205));
-        entradaPrecio1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaPrecio1.setForeground(new java.awt.Color(0, 124, 186));
-        entradaPrecio1.setBorder(null);
-        jPanel5.add(entradaPrecio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 460, 30));
-
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 530, 50));
-
-        jPanel6.setBackground(new java.awt.Color(205, 205, 205));
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        entradaDuracion.setBackground(new java.awt.Color(205, 205, 205));
-        entradaDuracion.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaDuracion.setForeground(new java.awt.Color(0, 124, 186));
-        entradaDuracion.setBorder(null);
-        jPanel6.add(entradaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
-
-        jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 530, 30));
 
         jPanel7.setBackground(new java.awt.Color(205, 205, 205));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -213,6 +209,28 @@ public class VistaCrearObra extends javax.swing.JFrame {
         jPanel10.add(entradaSegundoActor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
         jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 530, 30));
+
+        jLabel18.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel18.setText("Duración");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, 30));
+
+        jLabel19.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel19.setText("Horas:");
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, 30));
+
+        entradaMinutos.setBackground(new java.awt.Color(205, 205, 205));
+        entradaMinutos.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaMinutos.setForeground(new java.awt.Color(0, 124, 186));
+        entradaMinutos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+        jPanel3.add(entradaMinutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 110, 30));
+
+        entradaHoras.setBackground(new java.awt.Color(205, 205, 205));
+        entradaHoras.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaHoras.setForeground(new java.awt.Color(0, 124, 186));
+        entradaHoras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        jPanel3.add(entradaHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 110, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, 700, 430));
 
@@ -547,14 +565,14 @@ public class VistaCrearObra extends javax.swing.JFrame {
         return btnVolverAtras;
     }
 
-    public JTextField getEntradaDuracion() {
-        return entradaDuracion;
+    public JComboBox<String> getEntradaHoras() {
+        return entradaHoras;
     }
 
-    public JTextField getEntradaGenero() {
-        return entradaGenero;
+    public JComboBox<String> getEntradaMinutos() {
+        return entradaMinutos;
     }
-
+    
     public JTextField getEntradaPrecio() {
         return entradaPrecio;
     }
@@ -583,16 +601,20 @@ public class VistaCrearObra extends javax.swing.JFrame {
         this.txtError = txtError;
     }
 
+    public JTextField getEntradaGenero() {
+        return entradaGenero;
+    }
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrearObra;
     private javax.swing.JButton btnVolverAtras;
-    private javax.swing.JTextField entradaDuracion;
     private javax.swing.JTextField entradaGenero;
+    private javax.swing.JComboBox<String> entradaHoras;
+    private javax.swing.JComboBox<String> entradaMinutos;
     private javax.swing.JTextField entradaNombre;
     private javax.swing.JTextField entradaPrecio;
-    private javax.swing.JTextField entradaPrecio1;
     private javax.swing.JTextField entradaPrimerActor;
     private javax.swing.JTextField entradaResumen;
     private javax.swing.JTextField entradaSegundoActor;
@@ -604,6 +626,8 @@ public class VistaCrearObra extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -611,7 +635,6 @@ public class VistaCrearObra extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;

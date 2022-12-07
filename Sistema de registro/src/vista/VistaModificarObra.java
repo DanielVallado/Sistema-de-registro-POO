@@ -1,16 +1,22 @@
 package vista;
-
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class VistaModificarObra extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ModificarObra
-     */
     public VistaModificarObra() {
         initComponents();
+    }
+    
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/iconoApp.png"));
+        return retValue;
     }
 
     /**
@@ -23,206 +29,247 @@ public class VistaModificarObra extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        btnVolver = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        btnModificarObra = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        entradaGenero = new javax.swing.JTextField();
+        btnVolverAtras = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        entradaNombre = new javax.swing.JTextField();
-        entradaResumen = new javax.swing.JTextField();
+        txtError = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        entradaDuracion = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        btnModificar = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        entradaGenero = new javax.swing.JTextField();
-        entradaPrecioBoleto = new javax.swing.JTextField();
-        entradaSegundoActor = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
+        entradaResumen = new javax.swing.JTextField();
+        jPanel7 = new javax.swing.JPanel();
         entradaPrimerActor = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        entradaPrecio = new javax.swing.JTextField();
+        jPanel9 = new javax.swing.JPanel();
+        entradaNombre = new javax.swing.JTextField();
+        jPanel10 = new javax.swing.JPanel();
+        entradaSegundoActor = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        entradaHoras = new javax.swing.JComboBox<>();
+        jLabel15 = new javax.swing.JLabel();
+        entradaMinutos = new javax.swing.JComboBox<>();
+        jPanel11 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 623));
+        setTitle("Modificar Obra");
+        setIconImage(getIconImage());
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(28, 12, 91));
-        jPanel1.setToolTipText("");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(28, 12, 91));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("MODIFICAR OBRA");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, -1, 70));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 700, 90));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnVolver.setBackground(new java.awt.Color(255, 255, 255));
-        btnVolver.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnVolver.setForeground(new java.awt.Color(0, 124, 186));
-        btnVolver.setText("Volver atrás");
-        btnVolver.setBorderPainted(false);
-        btnVolver.setFocusPainted(false);
-        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarObra.setBackground(new java.awt.Color(0, 124, 186));
+        btnModificarObra.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnModificarObra.setForeground(new java.awt.Color(255, 255, 255));
+        btnModificarObra.setText("Modificar obra");
+        btnModificarObra.setBorderPainted(false);
+        btnModificarObra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnModificarObra.setFocusPainted(false);
+        btnModificarObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolverActionPerformed(evt);
+                btnModificarObraActionPerformed(evt);
             }
         });
-        jPanel3.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 470, 120, 30));
+        jPanel3.add(btnModificarObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 170, 50));
 
-        jLabel8.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Llena los siguientes datos para modificar un Obra");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 670, -1));
-
-        jLabel9.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 124, 186));
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 124, 186));
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel11.setText("Nombre:");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
-
-        entradaNombre.setBackground(new java.awt.Color(205, 205, 205));
-        entradaNombre.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaNombre.setForeground(new java.awt.Color(0, 124, 186));
-        entradaNombre.setBorder(null);
-        jPanel3.add(entradaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 460, 30));
-
-        entradaResumen.setBackground(new java.awt.Color(205, 205, 205));
-        entradaResumen.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaResumen.setForeground(new java.awt.Color(0, 124, 186));
-        entradaResumen.setBorder(null);
-        jPanel3.add(entradaResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 370, 30));
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel13.setText("Género:");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel14.setText("Resumen Temático:");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel12.setText("Duración:");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
-
-        entradaDuracion.setBackground(new java.awt.Color(205, 205, 205));
-        entradaDuracion.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaDuracion.setForeground(new java.awt.Color(0, 124, 186));
-        entradaDuracion.setBorder(null);
-        jPanel3.add(entradaDuracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 450, 30));
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel15.setText("Primer actor principal:");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
-
-        btnModificar.setBackground(new java.awt.Color(0, 124, 186));
-        btnModificar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnModificar.setForeground(new java.awt.Color(255, 255, 255));
-        btnModificar.setText("Modificar");
-        btnModificar.setBorderPainted(false);
-        btnModificar.setFocusPainted(false);
-        btnModificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 150, 57));
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel17.setText("Precio del boleto:");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
-
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 124, 186));
-        jLabel18.setText("Segundo actor principal:");
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, -1));
+        jPanel4.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         entradaGenero.setBackground(new java.awt.Color(205, 205, 205));
         entradaGenero.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         entradaGenero.setForeground(new java.awt.Color(0, 124, 186));
         entradaGenero.setBorder(null);
-        jPanel3.add(entradaGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 470, 30));
+        jPanel4.add(entradaGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
-        entradaPrecioBoleto.setBackground(new java.awt.Color(205, 205, 205));
-        entradaPrecioBoleto.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaPrecioBoleto.setForeground(new java.awt.Color(0, 124, 186));
-        entradaPrecioBoleto.setBorder(null);
-        jPanel3.add(entradaPrecioBoleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 380, 30));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 530, 30));
 
-        entradaSegundoActor.setBackground(new java.awt.Color(205, 205, 205));
-        entradaSegundoActor.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        entradaSegundoActor.setForeground(new java.awt.Color(0, 124, 186));
-        entradaSegundoActor.setBorder(null);
-        jPanel3.add(entradaSegundoActor, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 330, 30));
+        btnVolverAtras.setBackground(new java.awt.Color(255, 255, 255));
+        btnVolverAtras.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        btnVolverAtras.setForeground(new java.awt.Color(0, 124, 186));
+        btnVolverAtras.setText("Volver atrás");
+        btnVolverAtras.setBorderPainted(false);
+        btnVolverAtras.setContentAreaFilled(false);
+        btnVolverAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolverAtras.setFocusPainted(false);
+        jPanel3.add(btnVolverAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 120, 30));
+
+        jLabel11.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel11.setText("Precio del boleto:");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, 30));
+
+        txtError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtError.setForeground(new java.awt.Color(255, 0, 51));
+        txtError.setText("Error");
+        jPanel3.add(txtError, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel12.setText("Nombre de obra:");
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 18, 150, 30));
+
+        jLabel13.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel13.setText("Género:");
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, 30));
+
+        jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel14.setText("Resumen:");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, 40));
+
+        jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel16.setText("Primer actor:");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, 30));
+
+        jLabel17.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel17.setText("Segundo actor:");
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, 30));
+
+        jPanel5.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        entradaResumen.setBackground(new java.awt.Color(205, 205, 205));
+        entradaResumen.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaResumen.setForeground(new java.awt.Color(0, 124, 186));
+        entradaResumen.setBorder(null);
+        jPanel5.add(entradaResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 50));
+
+        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 530, 50));
+
+        jPanel7.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         entradaPrimerActor.setBackground(new java.awt.Color(205, 205, 205));
         entradaPrimerActor.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         entradaPrimerActor.setForeground(new java.awt.Color(0, 124, 186));
         entradaPrimerActor.setBorder(null);
-        jPanel3.add(entradaPrimerActor, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 350, 30));
+        jPanel7.add(entradaPrimerActor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
 
-        jLabel6.setFont(new java.awt.Font("Microsoft YaHei Light", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Modificar Obra");
+        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 530, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(234, 234, 234)
-                .addComponent(jLabel6)
-                .addContainerGap(199, Short.MAX_VALUE))
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE))
-        );
+        jPanel8.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        entradaPrecio.setBackground(new java.awt.Color(205, 205, 205));
+        entradaPrecio.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaPrecio.setForeground(new java.awt.Color(0, 124, 186));
+        entradaPrecio.setBorder(null);
+        jPanel8.add(entradaPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
+
+        jPanel3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 530, 30));
+
+        jPanel9.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        entradaNombre.setBackground(new java.awt.Color(205, 205, 205));
+        entradaNombre.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaNombre.setForeground(new java.awt.Color(0, 124, 186));
+        entradaNombre.setBorder(null);
+        jPanel9.add(entradaNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
+
+        jPanel3.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 530, 30));
+
+        jPanel10.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        entradaSegundoActor.setBackground(new java.awt.Color(205, 205, 205));
+        entradaSegundoActor.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaSegundoActor.setForeground(new java.awt.Color(0, 124, 186));
+        entradaSegundoActor.setBorder(null);
+        jPanel10.add(entradaSegundoActor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 30));
+
+        jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 530, 30));
+
+        jLabel18.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel18.setText("Duración");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, 30));
+
+        jLabel19.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel19.setText("Horas:");
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, 30));
+
+        entradaHoras.setBackground(new java.awt.Color(205, 205, 205));
+        entradaHoras.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaHoras.setForeground(new java.awt.Color(0, 124, 186));
+        entradaHoras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        jPanel3.add(entradaHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 110, 30));
+
+        jLabel15.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 124, 186));
+        jLabel15.setText("Minutos:");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, 30));
+
+        entradaMinutos.setBackground(new java.awt.Color(205, 205, 205));
+        entradaMinutos.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        entradaMinutos.setForeground(new java.awt.Color(0, 124, 186));
+        entradaMinutos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
+        jPanel3.add(entradaMinutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 110, 30));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, 700, 430));
+
+        jPanel11.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+    private void btnModificarObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarObraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnVolverActionPerformed
-
-    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificarActionPerformed
+    }//GEN-LAST:event_btnModificarObraActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -247,6 +294,1028 @@ public class VistaModificarObra extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -256,30 +1325,22 @@ public class VistaModificarObra extends javax.swing.JFrame {
         });
     }
 
-    public JButton getBtnModificar() {
-        return btnModificar;
+    public JButton getBtnModificarObra() {
+        return btnModificarObra;
     }
 
-    public void setBtnModificar(JButton btnModificar) {
-        this.btnModificar = btnModificar;
+    public JButton getBtnVolverAtras() {
+        return btnVolverAtras;
     }
 
-    public JButton getBtnVolver() {
-        return btnVolver;
+    public JComboBox<String> getEntradaHoras() {
+        return entradaHoras;
     }
 
-    public void setBtnVolver(JButton btnVolver) {
-        this.btnVolver = btnVolver;
+    public JComboBox<String> getEntradaMinutos() {
+        return entradaMinutos;
     }
-
-    public JTextField getEntradaDuracion() {
-        return entradaDuracion;
-    }
-
-    public void setEntradaDuracion(JTextField entradaDuracion) {
-        this.entradaDuracion = entradaDuracion;
-    }
-
+    
     public JTextField getEntradaGenero() {
         return entradaGenero;
     }
@@ -296,12 +1357,12 @@ public class VistaModificarObra extends javax.swing.JFrame {
         this.entradaNombre = entradaNombre;
     }
 
-    public JTextField getEntradaPrecioBoleto() {
-        return entradaPrecioBoleto;
+    public JTextField getEntradaPrecio() {
+        return entradaPrecio;
     }
 
-    public void setEntradaPrecioBoleto(JTextField entradaPrecioBoleto) {
-        this.entradaPrecioBoleto = entradaPrecioBoleto;
+    public void setEntradaPrecio(JTextField entradaPrecio) {
+        this.entradaPrecio = entradaPrecio;
     }
 
     public JTextField getEntradaPrimerActor() {
@@ -328,30 +1389,48 @@ public class VistaModificarObra extends javax.swing.JFrame {
         this.entradaSegundoActor = entradaSegundoActor;
     }
 
+    public JLabel getTxtError() {
+        return txtError;
+    }
+
+    public void setTxtError(JLabel txtError) {
+        this.txtError = txtError;
+    }
+
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnModificar;
-    private javax.swing.JButton btnVolver;
-    private javax.swing.JTextField entradaDuracion;
+    private javax.swing.JButton btnModificarObra;
+    private javax.swing.JButton btnVolverAtras;
     private javax.swing.JTextField entradaGenero;
+    private javax.swing.JComboBox<String> entradaHoras;
+    private javax.swing.JComboBox<String> entradaMinutos;
     private javax.swing.JTextField entradaNombre;
-    private javax.swing.JTextField entradaPrecioBoleto;
+    private javax.swing.JTextField entradaPrecio;
     private javax.swing.JTextField entradaPrimerActor;
     private javax.swing.JTextField entradaResumen;
     private javax.swing.JTextField entradaSegundoActor;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JLabel txtError;
     // End of variables declaration//GEN-END:variables
 }

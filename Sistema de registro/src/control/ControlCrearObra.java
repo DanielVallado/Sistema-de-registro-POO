@@ -17,24 +17,26 @@ public class ControlCrearObra implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent evento) {
-        String nombreObra, genero, resumenTematico, duracion, primerActor, segundoActor, precioBoleto;
+        String nombreObra, genero, resumenTematico, horas, minutos, duracion, primerActor, segundoActor, precioBoleto;
         
         if (vistaCrearObra.getBtnCrearObra() == evento.getSource()){
             nombreObra = vistaCrearObra.getEntradaNombre().getText();
             genero = vistaCrearObra.getEntradaGenero().getText();
             resumenTematico = vistaCrearObra.getEntradaResumen().getText();
-            duracion = vistaCrearObra.getEntradaDuracion().getText();
+            horas = (String) vistaCrearObra.getEntradaHoras().getSelectedItem();
+            minutos = (String) vistaCrearObra.getEntradaMinutos().getSelectedItem();
             primerActor = vistaCrearObra.getEntradaPrimerActor().getText();
             segundoActor = vistaCrearObra.getEntradaSegundoActor().getText();
             precioBoleto = vistaCrearObra.getEntradaPrecio().getText();
+            duracion = horas + ":" + minutos;
             
             verificarObra(nombreObra, genero, resumenTematico, duracion, primerActor, segundoActor, precioBoleto);
         }
         
         if(vistaCrearObra.getBtnVolverAtras() == evento.getSource()){
-            VistaObra vistaObra = new VistaObra();
-            ControlObras ControlObra = new ControlObras(vistaObra);
-            vistaObra.setVisible(true);
+            VistaObras vistaObras = new VistaObras();
+            ControlVistaObras controlVistaObras = new ControlVistaObras(vistaObras);
+            vistaObras.setVisible(true);
             this.vistaCrearObra.dispose();
         }
     }
@@ -44,26 +46,30 @@ public class ControlCrearObra implements ActionListener {
             this.vistaCrearObra.getTxtError().setText("Hay espacios vacíos");
             this.vistaCrearObra.getTxtError().setVisible(true);
         } else{
-            double duracionF = Float.valueOf(duracion);
-            double precioF = Float.valueOf(precioBoleto);
-            if(duracionF <= 0 || precioF <= 0){
-                this.vistaCrearObra.getTxtError().setText("Valores numéricos inválidos");
+            char[] numDuracion = duracion.toString().toCharArray();
+            String[] horaMinutos = duracion.split(":");
+            if(numDuracion[0] == ' ' || numDuracion[1] == ' ' || numDuracion[2] == ' ' || numDuracion[3] == ' ' || Integer.parseInt(horaMinutos[0]) > 24 || Integer.parseInt(horaMinutos[1]) > 59){
+                this.vistaCrearObra.getTxtError().setText("Duración inválida");
                 this.vistaCrearObra.getTxtError().setVisible(true);
             } else{
-                if(UsuarioAdministrador.verificarExistenciaObra(nombreObra)){
-                    this.vistaCrearObra.getTxtError().setText("Obra ya existente");
-                    this.vistaCrearObra.getTxtError().setVisible(true);
-                } else{
-                    duracionF = Math.round(duracionF * 100.0) / 100.0;
-                    precioF = Math.round(precioF * 100.0) / 100.0;
-                    if(UsuarioAdministrador.crearObra(nombreObra, genero, resumenTematico, duracionF, primerActor, segundoActor, precioF)){
-                        JOptionPane.showMessageDialog(null, nombreObra + " ha sido creada exitosamente", "Registo exitoso", JOptionPane.PLAIN_MESSAGE);
-                        VistaObra vistaObra = new VistaObra();
-                        ControlObras ControlObra = new ControlObras(vistaObra);
-                        vistaObra.setVisible(true);
-                        this.vistaCrearObra.dispose();
+                try{
+                    double precioF = Float.valueOf(precioBoleto);
+                    if(UsuarioAdministrador.verificarExistenciaObra(nombreObra)){
+                        this.vistaCrearObra.getTxtError().setText("Obra ya existente");
+                        this.vistaCrearObra.getTxtError().setVisible(true);
+                    } else{
+                        if(UsuarioAdministrador.crearObra(nombreObra, genero, resumenTematico, duracion, primerActor, segundoActor, precioF)){
+                            JOptionPane.showMessageDialog(null, nombreObra + " ha sido creada exitosamente", "Registo exitoso", JOptionPane.PLAIN_MESSAGE);
+                            VistaObras vistaObras = new VistaObras();
+                            ControlVistaObras controlVistaObras = new ControlVistaObras(vistaObras);
+                            vistaObras.setVisible(true);
+                            this.vistaCrearObra.dispose();
+                        }
                     }
-                }  
+                } catch(NumberFormatException e){
+                    this.vistaCrearObra.getTxtError().setText("Precio inválido");
+                    this.vistaCrearObra.getTxtError().setVisible(true);
+                }
             }
         }
     }

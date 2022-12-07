@@ -21,14 +21,14 @@ public class ControlMenuUsuario implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent evento) {        
         if(vistaMenuUsuario.getBtnReservar() == evento.getSource()){
-            Reservar vistaReservar = new Reservar();
-            ControlReservar controlReservar = new ControlReservar(vistaReservar, clienteActivo);
-            vistaReservar.setVisible(true);
+            VistaObrasUsuarios vistaObrasUsuarios = new VistaObrasUsuarios();
+            ControlVistaObrasUsuarios controlVistaObrasUsuarios = new ControlVistaObrasUsuarios(vistaObrasUsuarios, clienteActivo);
+            vistaObrasUsuarios.setVisible(true);
             this.vistaMenuUsuario.dispose();
         }
         
         if(vistaMenuUsuario.getBtnPerfil() == evento.getSource()){
-            Perfil vistaPerfil = new Perfil();
+            VistaPerfil vistaPerfil = new VistaPerfil();
             ControlPerfil controlPerfil = new ControlPerfil(vistaPerfil, clienteActivo);
             vistaPerfil.setVisible(true);
             this.vistaMenuUsuario.dispose();

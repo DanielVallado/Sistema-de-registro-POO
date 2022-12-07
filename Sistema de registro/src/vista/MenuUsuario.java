@@ -5,6 +5,8 @@
  */
 package vista;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
@@ -20,7 +22,12 @@ public class MenuUsuario extends javax.swing.JFrame {
     public MenuUsuario() {
         initComponents();
     }
-
+    
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/iconoApp.png"));
+        return retValue;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,6 +57,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio");
+        setIconImage(getIconImage());
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -148,6 +156,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         btnCerrarSesion.setForeground(new java.awt.Color(0, 124, 186));
         btnCerrarSesion.setText("Cerrar sesión ");
         btnCerrarSesion.setBorderPainted(false);
+        btnCerrarSesion.setContentAreaFilled(false);
         btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCerrarSesion.setFocusPainted(false);
         jPanel3.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 150, 30));
